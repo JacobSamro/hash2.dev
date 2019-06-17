@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
     this.currentModalOpened = i;
     this.modalTool = t;
     this.modalToolButton = t.button;
+    this.selectedTool = 0;
     $('#myModal').modal('show');
   }
 
