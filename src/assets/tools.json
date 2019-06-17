@@ -145,9 +145,10 @@
       "HTML",
       "CSS",
       "JSON",
-      "XML"
+      "XML",
+      "JavaScript"
     ],
     "service": "PrettierService",
-    "functions": ["prettifyHTML", "prettifyCSS", "prettifyJSON", "prettifyXML"]
+    "functions": ["prettifyHTML", "prettifyCSS", "prettifyJSON", "prettifyXML", "prettifyJS"]
   }
 ]
