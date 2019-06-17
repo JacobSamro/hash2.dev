@@ -1,0 +1,153 @@
+[
+  {
+    "id": 0,
+    "name": "Encryptor",
+    "subline": "Encrypts a Text String",
+    "u": "encryptor",
+    "category": "cryptography",
+    "img": "img/encryptor.png",
+    "button": "Encrypt",
+    "revised": "Jan 20 2019",
+    "processString": "Encrypting",
+    "description": "The available various Encryption Algorithms are md2, md4, md5, crc32, sha1, sha224, sha256, sha512.",
+    "select": [
+      "md2",
+      "md4",
+      "md5",
+      "crc32",
+      "sha1",
+      "sha224",
+      "sha256",
+      "sha512"
+    ],
+    "service": "EncryptionService",
+    "functions": ["toMD2","toMD4","toMD5","toCRC32","toSHA1","toSHA224","toSHA256","toSHA512"]
+  },
+  {
+    "id": 1,
+    "name": "Encoder",
+    "subline": "Encodes a Text String",
+    "u": "encoder",
+    "category": "datatools",
+    "img": "img/encoder.png",
+    "button": "Encode",
+    "revised": "Jan 20 2019",
+    "processString": "Encoding",
+    "description": "Encodes a given text string to URL or Base64 or HTML Special Chars Encoding based on the selection made.",
+    "select": [
+      "url encoder",
+      "base64 encoder",
+      "html special chars"
+    ],
+    "service": "EncoderService",
+    "functions": ["toURLEncodedString","toBase64EncodedString","toHTMLSpecialCharsEncode"]
+  },
+  {
+    "id": 2,
+    "name": "Decoder",
+    "subline": "Decodes a Text String",
+    "u": "decoder",
+    "category": "datatools",
+    "img": "img/decoder.png",
+    "button": "Decode",
+    "revised": "Jan 20 2019",
+    "processString": "Decoding",
+    "description": "Decodes an URL or Base64 or HTML Special Chars Encoded Text String",
+    "select": [
+      "url decoder",
+      "base64 decoder",
+      "html special chars"
+    ],
+    "service": "EncoderService",
+    "functions": ["toURLDecodedString","toBase64DecodedString","toHTMLSpecialCharsDecode"]
+  },
+  {
+    "id": 3,
+    "name": "String Cleaner",
+    "subline": "Manipulates a Text String",
+    "u": "stringcleaner",
+    "category": "datatools",
+    "img": "img/string_cleaner.png",
+    "button": "Clean",
+    "revised": "Jan 20 2019",
+    "processString": "Cleaning",
+    "description": "Removes paces or numbers or symbols or removes everything except number or alphabets.",
+    "select": [
+      "remove spaces",
+      "remove numbers",
+      "remove symbols",
+      "only numbers",
+      "only alpabets"
+    ],
+    "service": "StringService",
+    "functions": ["removeSpaces", "removeNumbers", "removeSymbols", "onlyNumbers", "onlyAlpabets"]
+  },
+  {
+    "id": 4,
+    "name": "Binary Converter",
+    "subline": "Text to Binary Converter",
+    "u": "binaryconverter",
+    "category": "datatools",
+    "img": "img/default.png",
+    "button": "Convert",
+    "revised": "Jan 20 2019",
+    "processString": "Converting",
+    "description": "Converts a Text String to Binary String and a Binary String to Text String.",
+    "select": [
+      "to string",
+      "to binary"
+    ],
+    "service": "BinaryService",
+    "functions": ["toString", "toBinary"]
+  },
+  {
+    "id": 5,
+    "name": "JSON to XML",
+    "subline": "JSON to XML Converter",
+    "u": "json2xml",
+    "category": "datatools",
+    "img": "img/default.png",
+    "button": "Convert",
+    "revised": "Jan 20 2019",
+    "processString": "Converting",
+    "description": "Converts the JSON which is to be fed as input and produces the XML Conversion of that JSON.",
+    "select": [],
+    "service": "JSONXmlService",
+    "functions": ["toXML"]
+  },
+  {
+    "id": 6,
+    "name": "XML to JSON",
+    "subline": "XML to JSON Converter",
+    "u": "xml2json",
+    "category": "datatools",
+    "img": "img/default.png",
+    "button": "Convert",
+    "revised": "Jan 20 2019",
+    "processString": "Converting",
+    "description": "Converts an inputes XML format data as string to a pretified json.",
+    "select": [],
+    "service": "JSONXmlService",
+    "functions": ["toJSON"]
+  },
+  {
+    "id": 7,
+    "name": "Prettier",
+    "subline": "Prettifies a String",
+    "u": "prettier",
+    "category": "datatools",
+    "img": "img/default.png",
+    "button": "Prettify",
+    "revised": "Jan 20 2019",
+    "processString": "Prettifying",
+    "description": "Prettifies the raw HTML, XML, CSS and JSON Strings",
+    "select": [
+      "HTML",
+      "CSS",
+      "JSON",
+      "XML"
+    ],
+    "service": "PrettierService",
+    "functions": ["prettifyHTML", "prettifyCSS", "prettifyJSON", "prettifyXML"]
+  }
+]
