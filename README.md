@@ -11,4 +11,14 @@
 * [ ]  Routing to Tools @jacobsamro
 
 ### New Tools to be added
+* [x] Prettier
+
+### Reviewed
+* [ ] Encryptor
+* [ ] Encoder
+* [ ] Decoder
+* [ ] String Clearner
+* [ ] Binary Converter
+* [ ] JSON to XML
+* [ ] XML to JSON
 * [ ] Prettier
