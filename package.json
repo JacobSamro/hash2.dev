@@ -52,5 +52,14 @@
     "tslint": "~5.11.0",
     "typescript": "~3.2.2",
     "xml-js": "^1.6.11"
+  },
+  "browser": {
+    "http": false,
+    "https": false,
+    "net": false,
+    "path": false,
+    "stream": false,
+    "tls": false,
+    "crypto": false
   }
 }
