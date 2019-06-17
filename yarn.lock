@@ -4597,13 +4597,6 @@ neo-async@^2.5.0, neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
-ngx-xml2json@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ngx-xml2json/-/ngx-xml2json-1.0.2.tgz#937e30724ff09a93f13f7ce047b1676d6095fd6c"
-  integrity sha512-n3uVaM+vJO+k8V9ZraT3aGuA32CywClDoyfMSLfQgdgOtpnO96AKZmCpzpBdfsffLpOdfkT9ezfVAOnZoPTfIw==
-  dependencies:
-    tslib "^1.9.0"
-
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
