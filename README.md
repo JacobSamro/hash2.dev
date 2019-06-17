@@ -1,5 +1,12 @@
 # Dev Tools ( tools.aroliant.com )
 
+| | Features
+-|-
+🔑 | Purely Secure, Nothing will be sent to backend
+🚀 | Modules will be loaded Asynchronously 
+🔧 | Serverless by Design
+🔥 | Built on Angular
+🖐 | A passionate and welcoming dev team!
 
 ### TODO
 * [ ]  Remove jQuery Completely @nkr96, @pradeep
@@ -13,7 +20,7 @@
 ### New Tools to be added
 * [x] Prettier
 
-### Reviewed
+### Review Required
 * [ ] Encryptor
 * [ ] Encoder
 * [ ] Decoder
@@ -22,3 +29,23 @@
 * [ ] JSON to XML
 * [ ] XML to JSON
 * [ ] Prettier
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome.<br />
+Feel request a feature by creating an [Issue](https://github.com/Aroliant/DevTools/issues)
+
+## Maintainers
+
+* Pradeep Hareesh
+
+## Show your support
+
+Please ⭐️ this repository if this project helped you!
+
+## 📝 License
+
+Copyright © 2019 [Aroliant](https://github.com/aroliant).<br />
+This project is [MIT](https://github.com/Aroliant/DevTools/blob/master/LICENSE) licensed.
+
+---
