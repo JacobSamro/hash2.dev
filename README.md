@@ -7,7 +7,7 @@
 * [ ]  All big libs will be loaded as modules asyncronosly @jacobsamro
 * [ ]  Remove Bootstrap @nkr96
 * [x]  Follow Proper Structure @pradeep
-* [ ]  Migrate Project to Angular 8 @jacobsamro
+* [x]  Migrate Project to Angular 8 @jacobsamro
 * [ ]  Routing to Tools @jacobsamro
 
 ### New Tools to be added
