@@ -29,4 +29,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
+      - run: yarn test --watch=false --progress=false --browsers=ChromeHeadlessCI
