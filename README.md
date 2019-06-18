@@ -48,4 +48,4 @@ Please ⭐️ this repository if this project helped you!
 Copyright © 2019 [Aroliant](https://github.com/aroliant).<br />
 This project is [MIT](https://github.com/Aroliant/DevTools/blob/master/LICENSE) licensed.
 
----
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAroliant%2FDevTools.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAroliant%2FDevTools?ref=badge_large)
