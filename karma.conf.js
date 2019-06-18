@@ -1,27 +1,40 @@
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/1.0/config/configuration-file.html
+
 module.exports = function (config) {
-  config.set({
-    frameworks: ["jasmine", "karma-typescript"],
-    files: [
-      { pattern: "src/chronos/**/*.+(ts|html)" }
+  const configuration = {
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma')
     ],
-    preprocessors: {
-      "**/*.ts": "karma-typescript"
+    client:{
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    reporters: ["progress", "karma-typescript"],
-    browsers: ['Chrome'],
+    coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, 'coverage'), reports: [ 'html', 'lcovonly' ],
+      fixWebpackSourcePaths: true
+    },
+    
+    reporters: ['progress', 'kjhtml'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['ChromeHeadless'],
     customLaunchers: {
-      ChromeHeadlessCI: {
+      ChromeHeadless: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox', '--disable-gpu']
       }
     },
-    karmaTypescriptConfig: {
-      bundlerOptions: {
-        entrypoints: /\.spec\.ts$/
-      },
-      compilerOptions: {
-        lib: ["ES2015", "DOM"]
-      }
-    }
-  });
+    singleRun: true
+  };
+
+
+  config.set(configuration);
 };
