@@ -3,14 +3,14 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-let tools = require('../assets/tools.json');
+const tools = require('../assets/tools.json');
 
-let services: any = {}
-let testCases: any = {}
+let services: any = {};
+let testCases: any = {};
 let missed = {
   testCaseFiles: 0,
   testCases: 0
-}
+};
 
 
 describe('AppComponent', () => {
