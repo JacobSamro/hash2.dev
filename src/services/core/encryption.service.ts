@@ -1,16 +1,16 @@
-const CRC32 = require('crc-32');
-const MD2 = require('js-md2');
-const MD4 = require('js-md4');
-const MD5 = require("crypto-js/md5");
-const SHA1 = require("crypto-js/sha1");
-const SHA224 = require("crypto-js/sha224");
-const SHA256 = require("crypto-js/sha256");
-const SHA512 = require("crypto-js/sha512");
+import * as CRC32 from 'crc-32';
+import MD2 from 'js-md2';
+import * as MD4 from 'js-md4';
+import MD5 from 'crypto-js/md5';
+import SHA1 from 'crypto-js/sha1';
+import SHA224 from "crypto-js/sha224";
+import SHA256 from "crypto-js/sha256";
+import SHA512 from "crypto-js/sha512";
 
 export class EncryptionService {
 
   static toCRC32(str) {
-    return CRC32(str);
+    return CRC32.str(str);
   }
 
   static toMD2(str) {
