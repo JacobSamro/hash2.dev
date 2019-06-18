@@ -1,4 +1,4 @@
-# Dev Tools ( tools.aroliant.com )
+# Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools)
 
 | | Features
 -|-
