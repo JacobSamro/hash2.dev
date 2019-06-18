@@ -1,4 +1,5 @@
 # Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAroliant%2FDevTools.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAroliant%2FDevTools?ref=badge_shield)
 
 | | Features
 -|-
@@ -49,3 +50,6 @@ Copyright © 2019 [Aroliant](https://github.com/aroliant).<br />
 This project is [MIT](https://github.com/Aroliant/DevTools/blob/master/LICENSE) licensed.
 
 ---
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAroliant%2FDevTools.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FAroliant%2FDevTools?ref=badge_large)
