@@ -1,34 +1,24 @@
 # Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools)
 
-| | Features
--|-
-🔑 | Purely Secure, Nothing will be sent to backend
-🚀 | Modules will be loaded Asynchronously 
-🔧 | Serverless by Design
-🔥 | Built on Angular
-🖐 | A passionate and welcoming dev team!
+|    | Features                                       |
+|----|------------------------------------------------|
+| 🔑 | Purely Secure, Nothing will be sent to backend |
+| 🚀 | Modules will be loaded Asynchronously          |
+| 🔧 | Serverless by Design                           |
+| 🔥 | Built on Angular                               |
+| 🖐 | A passionate and welcoming dev team!           |
 
-### TODO
-* [ ]  Remove jQuery Completely @nkr96, @pradeep
-* [ ]  Migrate Project to bulma & sass @nkr96
-* [x]  All big libs will be loaded as modules asyncronosly @jacobsamro
-* [ ]  Remove Bootstrap @nkr96
-* [x]  Follow Proper Structure @pradeep
-* [x]  Migrate Project to Angular 8 @jacobsamro
-* [ ]  Routing to Tools @jacobsamro
 
-### New Tools to be added
-* [x] Prettier
-
-### Review Required
-* [ ] Encryptor
-* [ ] Encoder
-* [ ] Decoder
-* [ ] String Clearner
-* [ ] Binary Converter
-* [ ] JSON to XML
-* [ ] XML to JSON
-* [ ] Prettier
+| Tool Name        | Test Coverage | Reviewed |
+|------------------|---------------|----------|
+| Encryptor        | 0%            | ✓        |
+| Encoder          | 0%            | ✘        |
+| Decoder          | 0%            | ✘        |
+| String Clearner  | 0%            | ✘        |
+| Binary Converter | 0%            | ✘        |
+| JSON to XML      | 0%            | ✘        |
+| XML to JSON      | 0%            | ✘        |
+| Prettier         | 0%            | ✘        |
 
 ## 🤝 Contributing
 
