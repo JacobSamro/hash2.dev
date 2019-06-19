@@ -1,8 +1,178 @@
 {
   "toMD2": [
     {
-      "input": "123",
-      "output": "ef1fedf5d32ead6b7aaf687de4ed1b71"
+      "input": "apple",
+      "output": "8015c9542cac74759f9f7196394cc25d"
+    },
+    {
+      "input": "mango",
+      "output": "0323c84c7be0672c43c3afc6a5c556b5"
+    },
+    {
+      "input": "wrong",
+      "output": "e569102bd4bf363ce01cbdd6938eb7cb"
+    },
+    {
+      "input": "seconds",
+      "output": "12a0c7042a06a720e2a6e9ee0dfc7ce2"
+    },
+    {
+      "input": "eagle",
+      "output": "6102146d34ca532fed698ab761a1a8e4"
+    }
+  ],
+  "toMD4": [
+    {
+      "input": "apple",
+      "output": "9443a56f029a293d8feff3c68d14b372"
+    },
+    {
+      "input": "mango",
+      "output": "011608ad81787926e36bf8124a3b9d27"
+    },
+    {
+      "input": "wrong",
+      "output": "cd2d38a6342d4e1f8cfff3ead53dfc7e"
+    },
+    {
+      "input": "seconds",
+      "output": "8cafb5cbfae59bf1f6810e17007aeee7"
+    },
+    {
+      "input": "eagle",
+      "output": "324576ca5c5e9def6db3b2e6fe540b03"
+    }
+  ],
+  "toMD5": [
+    {
+      "input": "apple",
+      "output": "1F3870BE274F6C49B3E31A0C6728957F"
+    },
+    {
+      "input": "mango",
+      "output": "AA00FAF97D042C13A59DA4D27EB32358"
+    },
+    {
+      "input": "wrong",
+      "output": "2BDA2998D9B0EE197DA142A0447F6725"
+    },
+    {
+      "input": "seconds",
+      "output": "783E8E29E6A8C3E22BAA58A19420EB4F"
+    },
+    {
+      "input": "eagle",
+      "output": "B09315EA09C6D3B5680094257F1F70E4"
+    }
+  ],
+  "toCRC32": [
+    {
+      "input": "apple",
+      "output": "2536fe7d"
+    },
+    {
+      "input": "mango",
+      "output": "b9882ff7"
+    },
+    {
+      "input": "wrong",
+      "output": "d512ec4f"
+    },
+    {
+      "input": "seconds",
+      "output": "27b4a754"
+    },
+    {
+      "input": "eagle",
+      "output": "578df26e"
+    }
+  ],
+  "toSHA1": [
+    {
+      "input": "apple",
+      "output": "D0BE2DC421BE4FCD0172E5AFCEEA3970E2F3D940"
+    },
+    {
+      "input": "mango",
+      "output": "934AAE49F648ED870C9C421829F4CECE6643CF86"
+    },
+    {
+      "input": "wrong",
+      "output": "A4B48A81CDAB1E1A5DD37907D6C85CA1C61DDC7C"
+    },
+    {
+      "input": "seconds",
+      "output": "7FEBCE039C4CF1C9115E832792B7D7F24FA56D4E"
+    },
+    {
+      "input": "eagle",
+      "output": "C29E4D9C8824409119EAA8BA182051B89121E663"
+    }
+  ],
+  "toSHA224": [
+    {
+      "input": "apple",
+      "output": "c016fa87e791f866af643f288ea8ebb653b4d6196cb1eaeadc46af5c"
+    },
+    {
+      "input": "mango",
+      "output": "d0e58955bc4a5f128e6872e9a70732a7bed4624f2c765cc09a13bec7"
+    },
+    {
+      "input": "wrong",
+      "output": "3813609e1571af14f477e736488d75db77fbc4538dfe1c71fd411544"
+    },
+    {
+      "input": "seconds",
+      "output": "ec509df26f24b037062470e4a3067e5208734c7b0efcf37bca421d21"
+    },
+    {
+      "input": "eagle",
+      "output": "5a7d71102f89e1e1b85008629c892efc1d1ef0791fba66f898995dd9"
+    }
+  ],
+  "toSHA256": [
+    {
+      "input": "apple",
+      "output": "3A7BD3E2360A3D29EEA436FCFB7E44C735D117C42D1C1835420B6B9942DD4F1B"
+    },
+    {
+      "input": "mango",
+      "output": "6815F3C300383519DE8E437497E2C3E97852FE8D717A5419D5AAFB00CB43C494"
+    },
+    {
+      "input": "wrong",
+      "output": "8810AD581E59F2BC3928B261707A71308F7E139EB04820366DC4D5C18D980225"
+    },
+    {
+      "input": "seconds",
+      "output": "59F006D63BD009B7F1F1D7BD7E29E1F3B9DB6505CE784CA3216EA90C6D6DCB11"
+    },
+    {
+      "input": "eagle",
+      "output": "E73B48F750BE953532C1D1757B5BA081E8A6B0408EA8B4E65EF1E65631A7DA06"
+    }
+  ],
+  "toSHA512": [
+    {
+      "input": "apple",
+      "output": "844D8779103B94C18F4AA4CC0C3B4474058580A991FBA85D3CA698A0BC9E52C5940FEB7A65A3A290E17E6B23EE943ECC4F73E7490327245B4FE5D5EFB590FEB2"
+    },
+    {
+      "input": "mango",
+      "output": "39090D50924E7D0DFD56C1DC1CDD430BB8EAD9CD5A384FEBBD5CF4F5E41C0236AF1BE8013716D462E6BD3B37FAD680EEEE32DEC48D819DFAB5C3B9DCA75525E9"
+    },
+    {
+      "input": "wrong",
+      "output": "4A80CDD4A4C8230EC1ACD2CE3B6139819E914F4DB4DC46EC621D0ADD88D5E3054B438359BAC599FC1E101DA39E9D2FE23B9FDD5625893F6A79F982127034622A"
+    },
+    {
+      "input": "seconds",
+      "output": "F134282D187B11A3618B1C45C895D09B65678807EDD796555E4BB5290E4CE482C096695D889C2CED3D85C8B0D742EEE36574245198542B22A9763B4D472ED6FB"
+    },
+    {
+      "input": "eagle",
+      "output": "A8783749CFF88F94FE983F9E4123A3B5848216EB0FA95F0C334ABE27FEA06C391E376512641C88C0DED61C2B08446A29C38F90A38583B9EB90A42D218CE24C39"
     }
   ]
 }
