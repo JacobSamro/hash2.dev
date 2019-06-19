@@ -68,54 +68,57 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should equal', () => {
-
-    TestBed.createComponent(AppComponent);
-
-    tools.forEach(async (tool, index) => {
-
-      tool.functions.forEach(async (func, index) => {
-
-        const serviceFilename = tool.service.replace("Service", "").toLowerCase();
-
-        if (testCases[serviceFilename] != undefined) {
-
-          if (testCases[serviceFilename][func] != undefined) {
-
-            let cases = testCases[serviceFilename][func];
 
 
-            cases.forEach((_case, i) => {
+  describe('Core Test', () => {
 
-              let input = _case.input
-              let output = services[serviceFilename][tool.service][func](input)
+    beforeAll(async () => {
+      TestBed.createComponent(AppComponent);
+    })
 
-              //console.log("File", serviceFilename, "Service", tool.service, "Func", func, "Input", input)
-              //console.log("Expected\n" , _case.output, "Got\n" , output)
+    it("should equal", () => {
 
-              expect(_case.output).toEqual(output);
+      tools.forEach((tool, index) => {
 
-            });
+        console.log("Exc")
 
-          } else {
-            missed.testCases += 1
+        tool.functions.forEach((func, index) => {
+
+          const serviceFilename = tool.service.replace("Service", "").toLowerCase();
+
+          if (testCases[serviceFilename] != undefined) {
+
+            if (testCases[serviceFilename][func] != undefined) {
+
+              let cases = testCases[serviceFilename][func];
+
+
+              cases.forEach((_case, i) => {
+
+                let input = _case.input
+                let output = services[serviceFilename][tool.service][func](input)
+
+                //console.log("File", serviceFilename, "Service", tool.service, "Func", func, "Input", input)
+                //console.log("Expected\n" , _case.output, "Got\n" , output)
+
+
+                expect(_case.output).toEqual(output);
+
+
+
+              });
+
+            } else {
+              missed.testCases += 1
+            }
+
           }
 
-        }
-
+        });
 
       })
-
-
-
     });
 
-
   });
-
-
-
-
-
 
 });
