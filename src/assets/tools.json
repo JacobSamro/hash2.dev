@@ -14,14 +14,13 @@
       "md2",
       "md4",
       "md5",
-      "crc32",
       "sha1",
       "sha224",
       "sha256",
       "sha512"
     ],
     "service": "EncryptionService",
-    "functions": ["toMD2","toMD4","toMD5","toCRC32","toSHA1","toSHA224","toSHA256","toSHA512"]
+    "functions": ["toMD2","toMD4","toMD5","toSHA1","toSHA224","toSHA256","toSHA512"]
   },
   {
     "id": 1,

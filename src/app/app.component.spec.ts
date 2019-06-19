@@ -90,6 +90,9 @@ describe('AppComponent', () => {
               let input = _case.input
               let output = services[serviceFilename][tool.service][func](input)
 
+              //console.log("File", serviceFilename, "Service", tool.service, "Func", func, "Input", input)
+              //console.log("Expected\n" , _case.output, "Got\n" , output)
+
               expect(_case.output).toEqual(output);
 
             });

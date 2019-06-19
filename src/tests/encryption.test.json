@@ -46,73 +46,51 @@
   "toMD5": [
     {
       "input": "apple",
-      "output": "1F3870BE274F6C49B3E31A0C6728957F"
+      "output": "1f3870be274f6c49b3e31a0c6728957f"
     },
     {
       "input": "mango",
-      "output": "AA00FAF97D042C13A59DA4D27EB32358"
+      "output": "aa00faf97d042c13a59da4d27eb32358"
     },
     {
       "input": "wrong",
-      "output": "2BDA2998D9B0EE197DA142A0447F6725"
+      "output": "2bda2998d9b0ee197da142a0447f6725"
     },
     {
       "input": "seconds",
-      "output": "783E8E29E6A8C3E22BAA58A19420EB4F"
+      "output": "783e8e29e6a8c3e22baa58a19420eb4f"
     },
     {
       "input": "eagle",
-      "output": "B09315EA09C6D3B5680094257F1F70E4"
-    }
-  ],
-  "toCRC32": [
-    {
-      "input": "apple",
-      "output": "2536fe7d"
-    },
-    {
-      "input": "mango",
-      "output": "b9882ff7"
-    },
-    {
-      "input": "wrong",
-      "output": "d512ec4f"
-    },
-    {
-      "input": "seconds",
-      "output": "27b4a754"
-    },
-    {
-      "input": "eagle",
-      "output": "578df26e"
+      "output": "b09315ea09c6d3b5680094257f1f70e4"
     }
   ],
   "toSHA1": [
     {
       "input": "apple",
-      "output": "D0BE2DC421BE4FCD0172E5AFCEEA3970E2F3D940"
+      "output": "d0be2dc421be4fcd0172e5afceea3970e2f3d940"
     },
     {
       "input": "mango",
-      "output": "934AAE49F648ED870C9C421829F4CECE6643CF86"
+      "output": "934aae49f648ed870c9c421829f4cece6643cf86"
     },
     {
       "input": "wrong",
-      "output": "A4B48A81CDAB1E1A5DD37907D6C85CA1C61DDC7C"
+      "output": "a4b48a81cdab1e1a5dd37907d6c85ca1c61ddc7c"
     },
     {
       "input": "seconds",
-      "output": "7FEBCE039C4CF1C9115E832792B7D7F24FA56D4E"
+      "output": "7febce039c4cf1c9115e832792b7d7f24fa56d4e"
     },
     {
       "input": "eagle",
-      "output": "C29E4D9C8824409119EAA8BA182051B89121E663"
+      "output": "c29e4d9c8824409119eaa8ba182051b89121e663"
     }
   ],
   "toSHA224": [
     {
       "input": "apple",
-      "output": "c016fa87e791f866af643f288ea8ebb653b4d6196cb1eaeadc46af5c"
+      "output": "b7bbfdf1a1012999b3c466fdeb906a629caa5e3e022428d1eb702281"
     },
     {
       "input": "mango",
@@ -120,59 +98,59 @@
     },
     {
       "input": "wrong",
-      "output": "3813609e1571af14f477e736488d75db77fbc4538dfe1c71fd411544"
+      "output": "2a53092b54226ef94589075248ed1cecdf2320b9356af63e0dfe8806"
     },
     {
       "input": "seconds",
-      "output": "ec509df26f24b037062470e4a3067e5208734c7b0efcf37bca421d21"
+      "output": "ba27b0e02c80d8dcf468dcc420b7eb0afddc36c4eb439f77907fd5db"
     },
     {
       "input": "eagle",
-      "output": "5a7d71102f89e1e1b85008629c892efc1d1ef0791fba66f898995dd9"
+      "output": "d19b187a2c44a9043d2941a96f588a644098c7a06381855aac2bce1e"
     }
   ],
   "toSHA256": [
     {
       "input": "apple",
-      "output": "3A7BD3E2360A3D29EEA436FCFB7E44C735D117C42D1C1835420B6B9942DD4F1B"
+      "output": "3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b"
     },
     {
       "input": "mango",
-      "output": "6815F3C300383519DE8E437497E2C3E97852FE8D717A5419D5AAFB00CB43C494"
+      "output": "6815f3c300383519de8e437497e2c3e97852fe8d717a5419d5aafb00cb43c494"
     },
     {
       "input": "wrong",
-      "output": "8810AD581E59F2BC3928B261707A71308F7E139EB04820366DC4D5C18D980225"
+      "output": "8810ad581e59f2bc3928b261707a71308f7e139eb04820366dc4d5c18d980225"
     },
     {
       "input": "seconds",
-      "output": "59F006D63BD009B7F1F1D7BD7E29E1F3B9DB6505CE784CA3216EA90C6D6DCB11"
+      "output": "59f006d63bd009b7f1f1d7bd7e29e1f3b9db6505ce784ca3216ea90c6d6dcb11"
     },
     {
       "input": "eagle",
-      "output": "E73B48F750BE953532C1D1757B5BA081E8A6B0408EA8B4E65EF1E65631A7DA06"
+      "output": "e73b48f750be953532c1d1757b5ba081e8a6b0408ea8b4e65ef1e65631a7da06"
     }
   ],
   "toSHA512": [
     {
       "input": "apple",
-      "output": "844D8779103B94C18F4AA4CC0C3B4474058580A991FBA85D3CA698A0BC9E52C5940FEB7A65A3A290E17E6B23EE943ECC4F73E7490327245B4FE5D5EFB590FEB2"
+      "output": "844d8779103b94c18f4aa4cc0c3b4474058580a991fba85d3ca698a0bc9e52c5940feb7a65a3a290e17e6b23ee943ecc4f73e7490327245b4fe5d5efb590feb2"
     },
     {
       "input": "mango",
-      "output": "39090D50924E7D0DFD56C1DC1CDD430BB8EAD9CD5A384FEBBD5CF4F5E41C0236AF1BE8013716D462E6BD3B37FAD680EEEE32DEC48D819DFAB5C3B9DCA75525E9"
+      "output": "39090d50924e7d0dfd56c1dc1cdd430bb8ead9cd5a384febbd5cf4f5e41c0236af1be8013716d462e6bd3b37fad680eeee32dec48d819dfab5c3b9dca75525e9"
     },
     {
       "input": "wrong",
-      "output": "4A80CDD4A4C8230EC1ACD2CE3B6139819E914F4DB4DC46EC621D0ADD88D5E3054B438359BAC599FC1E101DA39E9D2FE23B9FDD5625893F6A79F982127034622A"
+      "output": "4a80cdd4a4c8230ec1acd2ce3b6139819e914f4db4dc46ec621d0add88d5e3054b438359bac599fc1e101da39e9d2fe23b9fdd5625893f6a79f982127034622a"
     },
     {
       "input": "seconds",
-      "output": "F134282D187B11A3618B1C45C895D09B65678807EDD796555E4BB5290E4CE482C096695D889C2CED3D85C8B0D742EEE36574245198542B22A9763B4D472ED6FB"
+      "output": "f134282d187b11a3618b1c45c895d09b65678807edd796555e4bb5290e4ce482c096695d889c2ced3d85c8b0d742eee36574245198542b22a9763b4d472ed6fb"
     },
     {
       "input": "eagle",
-      "output": "A8783749CFF88F94FE983F9E4123A3B5848216EB0FA95F0C334ABE27FEA06C391E376512641C88C0DED61C2B08446A29C38F90A38583B9EB90A42D218CE24C39"
+      "output": "a8783749cff88f94fe983f9e4123a3b5848216eb0fa95f0c334abe27fea06c391e376512641c88c0ded61c2b08446a29c38f90a38583b9eb90a42d218ce24c39"
     }
   ]
 }
