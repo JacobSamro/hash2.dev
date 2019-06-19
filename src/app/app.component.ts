@@ -11,14 +11,17 @@ export class AppComponent implements OnInit {
 
   constructor(private jsonProvider: ProviderService) { }
 
-  viewModal: boolean = false
+
   input: any
   output: any
+
+  selectedSubTool: any
   selectedTool: any
-  currentModalOpened: any
-  modalToolButton: any
-  modalTool: any
-  tosearch: any
+  currentToolIndex = 0
+
+  canShowModal: boolean = false
+  modalButton: any
+
   selectedtools = []
   tools = [];
 
@@ -30,53 +33,55 @@ export class AppComponent implements OnInit {
   }
 
 
-  showModal(t, i) {
+  showModal(t, index) {
     this.input = "";
     this.output = "";
-    this.viewModal = true;
-    this.currentModalOpened = i;
-    this.modalTool = t;
-    this.modalToolButton = t.button;
-    this.selectedTool = 0;
+    this.canShowModal = true;
+    this.selectedTool = t;
+    this.modalButton = t.button;
+    this.selectedSubTool = 0;
+    this.currentToolIndex = index
     $('#myModal').modal('show');
   }
 
-  search(str) {
-    if (str == null || str == "") {
+  closeModal() {
+    this.canShowModal = false;
+  }
+
+  search(searchKeyword) {
+    if (searchKeyword == null || searchKeyword == "") {
       this.selectedtools = this.tools
     } else {
       this.selectedtools = [];
       for (var i = 0; i < this.tools.length; i++) {
-        if (this.tools[i].name.toLowerCase().includes(str.toLowerCase())) {
+        if (this.tools[i].name.toLowerCase().includes(searchKeyword.toLowerCase())) {
           this.selectedtools.push(this.tools[i]);
         }
       }
     }
   }
 
-  selected(index) {
+  selectSubTool(index) {
 
-    this.modalToolButton = this.modalTool.processString + '...';
+    this.modalButton = this.selectedTool.processString + '...';
 
     const serviceName = this.tools[index].service;
 
-    if(!this.selectedTool){
-      this.selectedTool = 0;
+    if (!this.selectedSubTool) {
+      this.selectedSubTool = 0;
     }
 
-    const toolName = this.tools[index].functions[this.selectedTool]
+    const toolName = this.tools[index].functions[this.selectedSubTool]
 
-    const serviceFilename = serviceName.replace("Service","").toLowerCase();
+    const serviceFilename = serviceName.replace("Service", "").toLowerCase();
 
     import(`../services/core/${serviceFilename}.service`).then((service) => {
       this.output = service[serviceName][toolName](this.input)
-      this.modalToolButton = this.modalTool.button
+      this.modalButton = this.selectedTool.button
     })
 
   }
 
-  closeModal() {
-    this.viewModal = false;
-  }
+
 
 }
