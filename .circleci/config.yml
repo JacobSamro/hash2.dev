@@ -29,4 +29,4 @@ jobs:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       # run tests!
-      - run: yarn test --watch=false --progress=false --browsers=ChromeHeadless
+      - run: yarn test --watch=false --progress=false --browsers=ChromeHeadless && yarn build:prod
