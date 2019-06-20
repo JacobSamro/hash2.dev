@@ -1,6 +1,7 @@
 <div class="container-fluid">
-  <div class="bg-dark row border-bottom py-1 mb-4 bg-light">
+  <div class="bg-light row shadow-sm py-1 mb-4">
     <div class="col-12 col-sm-12 col-md-5 col-lg-4 align-self-center p-0">
+      <!-- <h5 class="m-3 m-md-0 text-light font-weight-bold">Developer Tools</h5> -->
       <div class="logoContainer">
         <img class="small-gear gear" src="./assets/img/g-small.png">
         <img class="big-gear gear" src="./assets/img/g-big.png">
@@ -9,35 +10,80 @@
     </div>
     <div class="col-12 col-sm-12 col-md-7 col-lg-8 align-self-center">
       <div class="form-group m-0">
-        <input class="form-control" placeholder="Search for tools" (input)="search($event.target.value)" />
+        <input class="form-control" placeholder="Search for tools" (input)="search($event.target.value)"
+          [(ngModel)]="tosearch" />
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-1" *ngFor="let tool of selectedtools; let i = index">
-      <div class="card flex-md-row shadow-sm">
-        <div class="card-body d-flex flex-column align-items-start">
-          <h5 class="card-title text-primary">{{tool.name}}</h5>
-          <h6 class="mb-0">
-            <a class="text-dark" href="#">{{tool.subline}}</a>
-          </h6>
-          <div class="mb-1 text-muted small">Revised : {{tool.revised}}</div>
-          <p class="card-text mb-auto card-content-height small">{{tool.description}}</p>
-          <button class="btn btn-outline-primary btn-sm" (click)="showModal(tool, i )"
-            role="button">{{tool.button}}</button>
+  <div class="row pb-3">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-2" *ngFor="let t of selectedtools;">
+      <div class="media shadow-sm Tool border rounded">
+        <div class="media-body p-2 d-flex flex-column ToolBody">
+          <div>
+            <h5 class="mt-0 mb-1 text-primary">{{t.name}}</h5>
+            <h6 class="mb-1">
+              <a class="text-dark">{{t.subline}}</a>
+              <div class="mb-1 text-muted small">Revised : {{t.revised}}</div>
+            </h6>
+            <p class="small ToolDescription">{{t.description}}</p>
+          </div>
+          <!-- <button class="btn btn-outline-primary btn-sm" (click)="showModal(t,t.id)" role="button">{{t.button}}</button> -->
+          <a class="btn btn-outline-primary btn-sm" href="#openTool" (click)="showModal(t,t.id)">{{t.button}}</a>
         </div>
-        <img class="img-fluid flex-auto d-none d-md-block" alt="Thumbnail [200x200]" src="{{'./assets/'+tool.img}}">
+        <img alt="Thumbnail [200x200]" class="ToolImg m-1 m-lg-0 rounded" src="{{'./assets/'+t.img}}">
       </div>
     </div>
   </div>
-  <footer class="row py-5 mt-2 bg-dark text-light">
+  <footer class="row py-5 mt-2 bg-light text-light">
     <div class="col text-center">
-      <a target="_blank" href="https://aroliant.com" class="font-weight-bold text-white">Aroliant</a>
+      <div>
+        <span class="text-secondary">Copyright &copy; 2019 <a target="_blank" href="https://aroliant.com"
+            class="text-secondary">Aroliant</a></span>
+      </div>
+      <a href="https://github.com/Aroliant/DevTools">View on GitHub</a>
     </div>
   </footer>
 </div>
 
-<div class="modal draggable" id="myModal">
+<div id="openTool" class="ModalOverlay">
+  <div class="Modal">
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      <div class="d-flex flex-column justify-conten-around">
+        <div class="mb-2">
+          <h5 class="modal-title" *ngIf="selectedTool">{{selectedTool.name}} - Aroliant Developer Tool</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="d-flex flex-column flex-sm-row">
+          <textarea class="form-control mr-0 mr-sm-2" [(ngModel)]="input" placeholder="Enter Data ..." rows="7"
+            id="data"></textarea>
+          <textarea placeholder="Output" class="form-control" [(ngModel)]="output" rows="7" id="op"></textarea>
+        </div>
+        <div class="d-flex flex-row flex-wrap w-100 justify-content-between mt-3" *ngIf="selectedTool">
+          <div class="d-flex flex-row align-items-center">
+            <div class="form-group mb-0" *ngIf="selectedTool.select.length">
+              Select ( {{selectedTool.select.length}} ) : &nbsp;
+            </div>
+            <div class="form-group mb-0" *ngIf="selectedTool.select.length">
+              <select class="form-control mb-0" [(ngModel)]="selectedSubTool">
+                <option *ngFor="let tool of selectedTool.select; let i = index" [value]="i">{{tool}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group mb-0" *ngIf="modalButton">
+            <button type="button" class="btn btn-primary"
+              (click)="selectSubTool(currentToolIndex)">{{modalButton}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="modal draggable" id="myModal">
   <div class="modal-dialog" role="">
     <div class="modal-content">
       <div class="modal-header">
@@ -78,4 +124,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
