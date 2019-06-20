@@ -5,18 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 const tools = require('../assets/tools.json');
 
-let services: any = {};
-let testCases: any = {};
-let missed = {
-  testCaseFiles: 0,
-  testCases: 0
-};
-
 
 describe('AppComponent', () => {
 
   let fixture;
-  
+
   beforeEach(async(() => {
 
     TestBed.configureTestingModule({
@@ -35,18 +28,21 @@ describe('AppComponent', () => {
 
   }));
 
-
-  afterAll(() => {
-
-    console.log("Missed Test Case Files", missed.testCaseFiles)
-    console.log("Missed Test Cases", missed.testCases)
-
-  })
-
   it('should create the app', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it(`should load ngOnInit`, async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.ngOnInit()
+    app.search("test")
+    app.showModal(tools[0], 0)
+    //app.selectSubTool(0)
+    app.closeModal()
+    expect(app.currentToolIndex).toEqual(0);
+  }));
 
 
 });
