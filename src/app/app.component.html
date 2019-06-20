@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="bg-dark row border-bottom py-1 mb-4 bg-light">
     <div class="col-12 col-sm-12 col-md-5 col-lg-4 align-self-center p-0">
-      <div class="logoContainer">
+      <div class="logoContainer" routerLink="/">
         <img class="small-gear gear" src="./assets/img/g-small.png">
         <img class="big-gear gear" src="./assets/img/g-big.png">
         <img class="logo" src="./assets/img/logo.png">
@@ -14,17 +14,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-1" *ngFor="let tool of selectedtools; let i = index">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-1 atool" *ngFor="let tool of selectedtools; let i = index"
+      (click)="showModal(tool, i )" [attr.toolname]="tool.service">
       <div class="card flex-md-row shadow-sm">
         <div class="card-body d-flex flex-column align-items-start">
           <h5 class="card-title text-primary">{{tool.name}}</h5>
           <h6 class="mb-0">
-            <a class="text-dark" href="#">{{tool.subline}}</a>
+            <a class="text-dark">{{tool.subline}}</a>
           </h6>
           <div class="mb-1 text-muted small">Revised : {{tool.revised}}</div>
           <p class="card-text mb-auto card-content-height small">{{tool.description}}</p>
-          <button class="btn btn-outline-primary btn-sm" (click)="showModal(tool, i )"
-            role="button">{{tool.button}}</button>
+          <button class="btn btn-outline-primary btn-sm" role="button">{{tool.button}}</button>
         </div>
         <img class="img-fluid flex-auto d-none d-md-block" alt="Thumbnail [200x200]" src="{{'./assets/'+tool.img}}">
       </div>
@@ -41,8 +41,8 @@
   <div class="modal-dialog" role="">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" *ngIf="selectedTool">{{selectedTool.name}} - Aroliant Developer Tool</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" *ngIf="selectedTool">{{selectedTool.name}}</h5>
+        <button type="button" id="closeModal" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -50,10 +50,10 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-              <textarea class="form-control" [(ngModel)]="input" placeholder="Enter Data ..." rows="7"></textarea>
+              <textarea class="form-control" [(ngModel)]="input" placeholder="Enter Data ..." rows="7" id="input"></textarea>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-              <textarea placeholder="Output" class="form-control" [(ngModel)]="output" rows="7"></textarea>
+              <textarea placeholder="Output" class="form-control" [(ngModel)]="output" rows="7" id="output"></textarea>
             </div>
           </div>
         </div>
@@ -63,15 +63,16 @@
           Select ( {{selectedTool.select.length}} ) :
         </div>
         <div class="form-group" style="float:left" *ngIf="selectedTool.select.length">
-          <select class="form-control" [(ngModel)]="selectedSubTool">
+          <select class="form-control" [(ngModel)]="selectedSubTool" id="selectOptions">
             <option *ngFor="let tool of selectedTool.select; let i = index" [value]="i">{{tool}}</option>
           </select>
         </div>
         <div class="form-group">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModal()">Close</button>
         </div>
         <div class="form-group" *ngIf="modalButton">
           <button type="button" class="btn btn-primary"
+          id="process"
             (click)="selectSubTool(currentToolIndex)">{{modalButton}}</button>
         </div>
 
