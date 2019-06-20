@@ -2,6 +2,7 @@
   "name": "dev-tools",
   "version": "0.0.1",
   "scripts": {
+    "cy:run": "cypress run --spec \"cypress/integration/main.spec.js\"",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

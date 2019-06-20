@@ -110,7 +110,7 @@
     "revised": "Jan 20 2019",
     "processString": "Converting",
     "description": "Converts the JSON which is to be fed as input and produces the XML Conversion of that JSON.",
-    "select": [],
+    "select": ["json to xml"],
     "service": "JSONXmlService",
     "functions": ["toXML"]
   },
@@ -125,7 +125,7 @@
     "revised": "Jan 20 2019",
     "processString": "Converting",
     "description": "Converts an inputes XML format data as string to a pretified json.",
-    "select": [],
+    "select": ["xml to json"],
     "service": "JSONXmlService",
     "functions": ["toJSON"]
   },

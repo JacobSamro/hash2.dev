@@ -1,7 +1,8 @@
-describe('Main Test', function () {
-  it('Visits DevTools', function () {
+describe('Main Test', () => {
+  it('Visits DevTools', () => {
+
     cy.visit('http://localhost:4200/')
-    cy.get('.atool').each(($el, index, $list) => {
+    cy.get('.atool').each(($el, toolIndex, $list) => {
 
       let fixtureName = String($el.attr('toolname')).replace("Service", "").toLowerCase()
 
@@ -9,15 +10,40 @@ describe('Main Test', function () {
 
         cy.fixture(fixtureName).then((fixture) => {
 
-          cy.wrap($el).click().wait(100)
+          cy.wrap($el).click()
 
-          let selectValues = tools[index].select
+          let selectValues = tools[toolIndex].select
 
-          selectValues.forEach((select, i) => {
+          selectValues.forEach((select, subToolIndex) => {
 
-            cy.get('select').select(select).wait(100).get('#input').focus().type('123')
-              .get("#process").click()
-              .wait(100)
+            if (fixture[tools[toolIndex].functions[subToolIndex]]) {
+
+              let cases = fixture[tools[toolIndex].functions[subToolIndex]]
+
+              console.log(tools[toolIndex].select[subToolIndex], 'has', cases.length, 'cases')
+
+              cases.forEach((_case, caseIndex) => {
+
+                cy.get('#input').clear().get('#output').clear()
+
+                cy.get('select').select(select).get('#input').focus().type(_case.input)
+                  .get("#process").click()
+                  .wait(100)
+
+                it('Visits DevTools', () => {
+
+                  cy.get('#output').should('have.value', _case.output)
+
+                });
+
+
+              })
+
+            } else {
+
+              console.error(tools[toolIndex].select[subToolIndex], 'has no cases')
+
+            }
 
           })
 
