@@ -25,11 +25,7 @@ jobs:
       - run: yarn install
       - run:
           name: Setup Code Climate test-reporter
-          command: |
-          # download test reporter as a static binary
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-            ./cc-test-reporter before-build
+          command:  curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter &&  chmod +x ./cc-test-reporter && ./cc-test-reporter before-build
 
       - save_cache:
           paths:
@@ -40,6 +36,4 @@ jobs:
       - run: yarn test --watch=false --progress=false --browsers=ChromeHeadless && ng build --prod
       - run:
           name: Run tests
-          command: |
-          # upload test report to Code Climate using `after-build`
-            ./cc-test-reporter after-build -t lcov ./coverage/lcov.info
+          command: ./cc-test-reporter after-build -t lcov ./coverage/lcov.info
