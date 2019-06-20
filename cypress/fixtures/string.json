@@ -1,3 +1,112 @@
 {
-  
+  "removeSpaces": [
+    {
+      "input": "apple mango",
+      "output": "applemango"
+    },
+    {
+      "input": "tomato green land",
+      "output": "tomatogreenland"
+    },
+    {
+      "input": "Let's Encrypt",
+      "output": "Let'sEncrypt"
+    },
+    {
+      "input": "Second Chance",
+      "output": "SecondChance"
+    },
+    {
+      "input": "Waiting12@r the",
+      "output": "Waiting12@rthe"
+    }
+  ],
+  "removeNumbers": [
+    {
+      "input": "apple@123",
+      "output": "apple@"
+    },
+    {
+      "input": "12#23r*(6",
+      "output": "#r*("
+    },
+    {
+      "input": "believe4win here45",
+      "output": "believewin here"
+    },
+    {
+      "input": "two12 twelve2",
+      "output": "two twelve"
+    },
+    {
+      "input": "hello1@",
+      "output": "hello@"
+    }
+  ],
+  "removeSymbols": [
+    {
+      "input": "hello1@",
+      "output": "hello1"
+    },
+    {
+      "input": "12#23r*(6",
+      "output": "1223r6"
+    },
+    {
+      "input": "apple@123",
+      "output": "apple123"
+    },
+    {
+      "input": "wors45",
+      "output": "wors45"
+    },
+    {
+      "input": "twelve@#t4Y",
+      "output": "twelvet4Y"
+    }
+  ],
+  "onlyNumbers": [
+    {
+      "input": "apple@123",
+      "output": "123"
+    },
+    {
+      "input": "ampl23^72rt",
+      "output": "2372"
+    },
+    {
+      "input": "a3r 4c2",
+      "output": "342"
+    },
+    {
+      "input": "1234a",
+      "output": "1234"
+    },
+    {
+      "input": "ap@3#,7a2@45%",
+      "output": "37245"
+    }
+  ],
+  "onlyAlpabets": [
+    {
+      "input": "ap@3#,7a2@45%",
+      "output": "apa"
+    },
+    {
+      "input": "a3r 4c2",
+      "output": "arc"
+    },
+    {
+      "input": "a234$tya",
+      "output": "atya"
+    },
+    {
+      "input": "seconds",
+      "output": "seconds"
+    },
+    {
+      "input": "@a3i*uHa",
+      "output": "aiuHa"
+    }
+  ]
 }

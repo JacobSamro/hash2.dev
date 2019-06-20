@@ -1,5 +1,5 @@
 describe('Main Test', () => {
-  it('Visits DevTools', () => {
+  it('Should be true', () => {
 
     cy.visit('http://localhost:4200/')
     cy.get('.atool').each(($el, toolIndex, $list) => {
@@ -30,11 +30,9 @@ describe('Main Test', () => {
                   .get("#process").click()
                   .wait(100)
 
-                it('Visits DevTools', () => {
 
-                  cy.get('#output').should('have.value', _case.output)
+                cy.get('#output').should('have.value', _case.output)
 
-                });
 
 
               })
