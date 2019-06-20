@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProviderService } from 'src/services/provider.service';
-declare var $: any
 
 @Component({
   selector: 'app-root',
@@ -41,7 +40,6 @@ export class AppComponent implements OnInit {
     this.modalButton = t.button;
     this.selectedSubTool = 0;
     this.currentToolIndex = index
-    $('#myModal').modal('show');
   }
 
   closeModal() {
