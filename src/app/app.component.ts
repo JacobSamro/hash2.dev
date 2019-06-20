@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProviderService } from 'src/services/provider.service';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+
 declare var $: any
 
 @Component({
@@ -9,8 +11,7 @@ declare var $: any
 })
 export class AppComponent implements OnInit {
 
-  constructor(private jsonProvider: ProviderService) { }
-
+  constructor(private jsonProvider: ProviderService, private route: ActivatedRoute, private router: Router) { }
 
   input: any
   output: any
@@ -24,14 +25,33 @@ export class AppComponent implements OnInit {
 
   selectedtools = []
   tools = [];
+  toolIndex = {}
+
+  bootstrapTool = undefined
 
   ngOnInit() {
     this.jsonProvider.getJSONFileAsString().then((jsonData: any) => {
       this.tools = jsonData
       this.selectedtools = this.tools
-    })
-  }
+      // Create Index with Tool Name
+      this.tools.forEach((tool, i) => {
+        this.toolIndex[tool.u] = i
+      })
 
+      if (this.bootstrapTool) {
+        this.showModal(this.tools[this.toolIndex[this.bootstrapTool]], 0)
+      }
+    })
+
+
+    this.route.params.subscribe((params) => {
+      let path = window.location.pathname.split('/')
+      if (path.length == 3) {
+        this.bootstrapTool = path[2]
+      }
+    })
+
+  }
 
   showModal(t, index) {
     this.input = "";
@@ -42,10 +62,12 @@ export class AppComponent implements OnInit {
     this.selectedSubTool = 0;
     this.currentToolIndex = index
     $('#myModal').modal('show');
+    this.router.navigate(['/tool/', t.u])
   }
 
   closeModal() {
     this.canShowModal = false;
+    this.router.navigate(['/'])
   }
 
   search(searchKeyword) {
