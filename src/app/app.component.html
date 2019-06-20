@@ -14,7 +14,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-1" *ngFor="let tool of selectedtools; let i = index">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-1" *ngFor="let tool of selectedtools; let i = index"
+      (click)="showModal(tool, i )">
       <div class="card flex-md-row shadow-sm">
         <div class="card-body d-flex flex-column align-items-start">
           <h5 class="card-title text-primary">{{tool.name}}</h5>
@@ -23,8 +24,7 @@
           </h6>
           <div class="mb-1 text-muted small">Revised : {{tool.revised}}</div>
           <p class="card-text mb-auto card-content-height small">{{tool.description}}</p>
-          <button class="btn btn-outline-primary btn-sm" (click)="showModal(tool, i )"
-            role="button">{{tool.button}}</button>
+          <button class="btn btn-outline-primary btn-sm" role="button">{{tool.button}}</button>
         </div>
         <img class="img-fluid flex-auto d-none d-md-block" alt="Thumbnail [200x200]" src="{{'./assets/'+tool.img}}">
       </div>
