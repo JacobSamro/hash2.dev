@@ -15,30 +15,8 @@ let missed = {
 
 describe('AppComponent', () => {
 
-
-  beforeAll(async(async () => {
-
-
-    await tools.forEach(async (tool, index) => {
-
-      const serviceFilename = tool.service.replace("Service", "").toLowerCase();
-
-      // Import the Service
-      services[serviceFilename] = await require(`../services/core/${serviceFilename}.service.ts`)
-
-      // Import the Test Case
-      try {
-        testCases[serviceFilename] = await require(`../tests/${serviceFilename}.test.json`)
-      } catch (err) {
-        console.error("Unable to load test case for", serviceFilename)
-        missed.testCaseFiles += 1
-      }
-
-    })
-
-
-  }))
-
+  let fixture;
+  
   beforeEach(async(() => {
 
     TestBed.configureTestingModule({
@@ -51,74 +29,24 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
-  }));
 
+    fixture = TestBed.createComponent(AppComponent);
+
+
+  }));
 
 
   afterAll(() => {
 
-    console.error("Missed Test Case Files", missed.testCaseFiles)
-    console.error("Missed Test Cases", missed.testCases)
+    console.log("Missed Test Case Files", missed.testCaseFiles)
+    console.log("Missed Test Cases", missed.testCases)
 
   })
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-
-
-  describe('Core Test', () => {
-
-    beforeAll(async () => {
-      TestBed.createComponent(AppComponent);
-    })
-
-    it("should equal", () => {
-
-      tools.forEach((tool, index) => {
-
-        console.log("Exc")
-
-        tool.functions.forEach((func, index) => {
-
-          const serviceFilename = tool.service.replace("Service", "").toLowerCase();
-
-          if (testCases[serviceFilename] != undefined) {
-
-            if (testCases[serviceFilename][func] != undefined) {
-
-              let cases = testCases[serviceFilename][func];
-
-
-              cases.forEach((_case, i) => {
-
-                let input = _case.input
-                let output = services[serviceFilename][tool.service][func](input)
-
-                //console.log("File", serviceFilename, "Service", tool.service, "Func", func, "Input", input)
-                //console.log("Expected\n" , _case.output, "Got\n" , output)
-
-
-                expect(_case.output).toEqual(output);
-
-
-
-              });
-
-            } else {
-              missed.testCases += 1
-            }
-
-          }
-
-        });
-
-      })
-    });
-
-  });
 
 });
