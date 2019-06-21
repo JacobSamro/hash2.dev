@@ -1,5 +1,4 @@
-# Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools) [![Maintainability](https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/maintainability)](https://codeclimate.com/github/Aroliant/DevTools/maintainability) <a href="https://codeclimate.com/github/Aroliant/DevTools/test_coverage"><img src="https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/test_coverage" /></a>
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAroliant%2FDevTools.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAroliant%2FDevTools?ref=badge_shield)
+# Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools) [![Maintainability](https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/maintainability)](https://codeclimate.com/github/Aroliant/DevTools/maintainability) <a href="https://codeclimate.com/github/Aroliant/DevTools/test_coverage"><img src="https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/test_coverage" /></a> [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAroliant%2FDevTools.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAroliant%2FDevTools?ref=badge_shield)
 
 
 |    | Features                                       |
