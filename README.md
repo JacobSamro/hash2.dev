@@ -12,10 +12,10 @@
 
 | Tool Name        | Test Coverage | Reviewed |
 |------------------|---------------|----------|
-| Encryptor        | 0%            | ✓        |
+| Encryptor        | 100%          | ✓        |
 | Encoder          | 0%            | ✘        |
 | Decoder          | 0%            | ✘        |
-| String Clearner  | 0%            | ✘        |
+| String Clearner  | 100%          | ✘        |
 | Binary Converter | 0%            | ✘        |
 | JSON to XML      | 0%            | ✘        |
 | XML to JSON      | 0%            | ✘        |
