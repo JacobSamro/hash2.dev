@@ -8,7 +8,8 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:10.9-browsers
-
+    environment:
+      CC_TEST_REPORTER_ID: dead9def4f74e6e605df21523e952507718f55f82ddacc29ed50938795ddaa8c
     working_directory: ~/repo
 
     steps:
@@ -22,6 +23,9 @@ jobs:
             - v1-dependencies-
 
       - run: yarn install
+      - run:
+          name: Setup Code Climate test-reporter
+          command:  curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter &&  chmod +x ./cc-test-reporter && ./cc-test-reporter before-build
 
       - save_cache:
           paths:
@@ -29,4 +33,7 @@ jobs:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       # run tests!
-      - run: yarn test --watch=false --progress=false --browsers=ChromeHeadless
+      - run: yarn test --watch=false --progress=false --browsers=ChromeHeadless && yarn ng build --prod
+      - run:
+          name: Run tests
+          command: ./cc-test-reporter after-build -t lcov ./coverage/lcov.info

@@ -17,10 +17,10 @@ export class ProviderService {
 
       this.httpClient.get("/assets/tools.json", { responseType: 'json' }).subscribe((res: any) => {
 
-        resolve(res)
+        return resolve(res)
 
       }, (err: any) => {
-        reject(err)
+        return reject(err)
       })
 
     })
