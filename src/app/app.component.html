@@ -14,21 +14,21 @@
     </div>
   </div>
   <div class="row pb-3">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-2" *ngFor="let t of selectedtools;">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-2" *ngFor="let tool of selectedtools; let i = index">
       <div class="media shadow-sm Tool border rounded">
         <div class="media-body p-2 d-flex flex-column ToolBody">
           <div>
-            <h5 class="mt-0 mb-1 text-primary">{{t.name}}</h5>
+            <h5 class="mt-0 mb-1 text-primary">{{tool.name}}</h5>
             <h6 class="mb-1">
-              <a class="text-dark">{{t.subline}}</a>
-              <div class="mb-1 text-muted small">Revised : {{t.revised}}</div>
+              <a class="text-dark">{{tool.subline}}</a>
+              <div class="mb-1 text-muted small">Revised : {{tool.revised}}</div>
             </h6>
-            <p class="small ToolDescription">{{t.description}}</p>
+            <p class="small ToolDescription">{{tool.description}}</p>
           </div>
           <!-- <button class="btn btn-outline-primary btn-sm" (click)="showModal(t,t.id)" role="button">{{t.button}}</button> -->
-          <a class="btn btn-outline-primary btn-sm" href="#openTool" (click)="showModal(t,t.id)">{{t.button}}</a>
+          <a class="btn btn-outline-primary btn-sm" href="#openTool" (click)="showModal(tool,i)">{{tool.button}}</a>
         </div>
-        <img alt="Thumbnail [200x200]" class="ToolImg m-1 m-lg-0 rounded" src="{{'./assets/'+t.img}}">
+        <img alt="Thumbnail [200x200]" class="ToolImg m-1 m-lg-0 rounded" src="{{'./assets/'+tool.img}}">
       </div>
     </div>
   </div>
