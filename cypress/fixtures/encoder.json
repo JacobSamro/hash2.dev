@@ -28,6 +28,22 @@
         }
     ],
     "html special chars": [
+        {
+            "input": "<head>",
+            "output": "&lt;head&gt;"
+        },
+        {
+            "input": "<body>",
+            "output": "&lt;body&gt;"
+        },
+        {
+            "input": "<script>",
+            "output": "&lt;/script&gt;"
+        },
+        {
+            "input": "<div>",
+            "output": "&lt;div&gt;"
+        }
         
     ]
 }
