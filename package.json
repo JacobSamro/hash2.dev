@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "scripts": {
     "cy:run": "cypress run --spec \"cypress/integration/main.spec.js\"",
+    "cy:run:server": "cypress run --record --key 472289cb-1185-4e7b-8284-df04cbe54662",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "concurrently \"npm run start\" \"wait-on http-get://localhost:4200 && npm run cy:run\" --kill-others",
+    "e2e": "concurrently \"npm run start\" \"wait-on http-get://localhost:4200 && npm run cy:run:server\" --kill-others",
     "postinstall": "node patch.js"
   },
   "private": true,

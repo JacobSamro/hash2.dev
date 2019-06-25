@@ -33,7 +33,9 @@ jobs:
           key: v1-dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       # run tests!
-      - run: yarn test --watch=false --progress=false --browsers=ChromeHeadless && yarn ng build --prod
+      - run: yarn test --watch=false --progress=false --browsers=ChromeHeadless
+      - run: yarn ng build --prod
       - run:
           name: Run tests
           command: ./cc-test-reporter after-build -t lcov ./coverage/lcov.info
+      - run: yarn e2e
