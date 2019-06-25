@@ -17,7 +17,7 @@
     "base64 encoder": [
         {
             "input": "aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==",
-            "output": "https://www.google.com",
+            "output": "https://www.google.com"
         },
         {
             "input": "aHR0cHM6Ly93d3cuZmFjZWJvb2suY29t",
