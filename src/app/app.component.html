@@ -46,8 +46,7 @@
   </footer>
 </div>
 
-<div class="ModalOverlay" [class.show]="canShowModal==true" [class.showModal]="canShowModal==true"
-  >
+<div class="ModalOverlay" [class.show]="canShowModal==true" [class.showModal]="canShowModal==true">
   <div class="Modal">
     <div class="content">
       <div class="d-flex flex-column justify-conten-around">
@@ -59,8 +58,8 @@
         </div>
         <div class="d-flex flex-column flex-sm-row">
           <textarea class="form-control mr-0 mr-sm-2" [(ngModel)]="input" placeholder="Enter Data ..." rows="7"
-            id="data"></textarea>
-          <textarea placeholder="Output" class="form-control" [(ngModel)]="output" rows="7" id="op"></textarea>
+            id="input"></textarea>
+          <textarea placeholder="Output" class="form-control" [(ngModel)]="output" rows="7" id="output"></textarea>
         </div>
         <div class="d-flex flex-row flex-wrap w-100 justify-content-between mt-3" *ngIf="selectedTool">
 
@@ -76,7 +75,7 @@
           </div>
 
           <div class="form-group mb-0">
-            <button type="button" class="btn btn-primary"
+            <button type="button" class="btn btn-primary" id="process"
               (click)="selectSubTool(currentToolIndex)">{{modalButton}}</button>
           </div>
         </div>
