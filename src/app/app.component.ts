@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProviderService } from 'src/services/provider.service';
 import { ActivatedRoute, Router, Params } from '@angular/router';
-
-declare var $:any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -60,7 +58,6 @@ export class AppComponent implements OnInit {
     this.modalButton = t.button;
     this.selectedSubTool = 0;
     this.currentToolIndex = index
-    $('#myModal').modal('show');
     this.router.navigate(['/tool/', t.u])
   }
 
