@@ -1,0 +1,29 @@
+{
+    "url encoder": [
+        {
+            "input": "https%3A%2F%2Fwww.google.com",
+            "output": "https://www.google.com"
+        },
+        {
+            "input": "https%3A%2F%2Fwww.facebook.com",
+            "output": "https://www.facebook.com"
+        },
+        {
+            "input": "https%3A%2F%2Fwww.aroliant.com",
+            "output": "https://www.aroliant.com"
+        }
+        
+    ],
+    "base64 encoder": [
+        {
+            "input": "123",
+            "output": "00110001 00110010 00110011"
+        }
+    ],
+    "html special chars": [
+        {
+            "input": "123",
+            "output": "00110001 00110010 00110011"
+        }
+    ]
+}

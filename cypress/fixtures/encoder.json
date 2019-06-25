@@ -1,3 +1,36 @@
 {
-  
+    "url encoder": [
+        {
+            "input": "https://www.google.com",
+            "output": "https%3A%2F%2Fwww.google.com"
+        },
+        {
+            "input": "https://www.facebook.com",
+            "output": "https%3A%2F%2Fwww.facebook.com"
+        },
+        {
+            "input": "https://www.aroliant.com",
+            "output": "https%3A%2F%2Fwww.aroliant.com"
+        }
+    ],
+    "base64 encoder": [
+        {
+            "input": "https://www.google.com",
+            "output": "aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ=="
+        },
+        {
+            "input": "https://www.facebook.com",
+            "output": "aHR0cHM6Ly93d3cuZmFjZWJvb2suY29t"
+        },
+        {
+            "input": "https://www.aroliant.com",
+            "output": "aHR0cHM6Ly93d3cuYXJvbGlhbnQuY29t"
+        }
+    ],
+    "html special chars": [
+        {
+            "input": "123",
+            "output": "00110001 00110010 00110011"
+        }
+    ]
 }
