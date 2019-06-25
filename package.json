@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "cy:run": "cypress run --spec \"cypress/integration/main.spec.js\"",
-    "cy:run:server": "cypress run --record --key 472289cb-1185-4e7b-8284-df04cbe54662",
+    "cy:run:server": "npx cypress run --record --key 472289cb-1185-4e7b-8284-df04cbe54662",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
