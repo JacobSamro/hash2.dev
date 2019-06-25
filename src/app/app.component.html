@@ -16,7 +16,7 @@
 
   <div class="row pb-3">
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-2" *ngFor="let tool of selectedtools; let i = index"
-      (click)="showModal(tool, i )" [attr.toolname]="tool.service">
+      (click)="showModal(tool, i )" [attr.toolname]="tool.service" class="atool">
       <div class="media shadow-sm Tool border rounded">
         <div class="media-body p-2 d-flex flex-column ToolBody">
           <div>
