@@ -1,3 +1,43 @@
 {
-  
+    "json to xml": [
+        {
+            "input": {
+                "name":"John",
+                "age":30,
+                "cars": [
+                  {"name":"Ford", "models":["Fiesta", "Focus", "Mustang"]},
+                  {"name":"BMW", "models":["320", "X3", "X5"]},
+                  {"name":"Fiat", "models":["500", "Panda"] }
+                ]
+              },
+            "output": "<name>John</name><age>30</age><cars><name>Ford</name><models>Fiesta</models><models>Focus</models><models>Mustang</models></cars><cars><name>BMW</name><models>320</models><models>X3</models><models>X5</models></cars><cars><name>Fiat</name><models>500</models><models>Panda</models></cars>"
+            
+        },
+        {
+            "input":{
+                "cars": {
+                    "Nissan": [
+                        {"model":"Sentra", "doors":4},
+                        {"model":"Maxima", "doors":4},
+                        {"model":"Skyline", "doors":2}
+                    ],
+                    "Ford": [
+                        {"model":"Taurus", "doors":4},
+                        {"model":"Escort", "doors":4}
+                    ]
+                }
+            }
+            ,
+            "output":"<cars><Nissan><model>Sentra</model><doors>4</doors></Nissan><Nissan><model>Maxima</model><doors>4</doors></Nissan><Nissan><model>Skyline</model><doors>2</doors></Nissan><Ford><model>Taurus</model><doors>4</doors></Ford><Ford><model>Escort</model><doors>4</doors></Ford></cars>"
+        },
+        {
+            "input":{
+                "name" : "Admin",
+                "age" : 36,
+                "rights" : [ "admin", "editor", "contributor" ]
+            },
+            "output":"<name>Admin</name><age>36</age><rights>admin</rights><rights>editor</rights><rights>contributor</rights>"
+        }
+        
+    ]
 }
