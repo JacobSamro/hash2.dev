@@ -36,8 +36,11 @@ export class AppComponent implements OnInit {
       })
 
       if (this.bootstrapTool) {
-        this.showModal(this.tools[this.toolIndex[this.bootstrapTool]], 0)
+        const currentToolIndex = this.toolIndex[this.bootstrapTool]
+        this.currentToolIndex = currentToolIndex
+        this.showModal(this.tools[currentToolIndex], this.currentToolIndex)
       }
+
     })
 
 
@@ -79,17 +82,17 @@ export class AppComponent implements OnInit {
     }
   }
 
-  selectSubTool(index) {
+  selectSubTool() {
 
     this.modalButton = this.selectedTool.processString + '...';
 
-    const serviceName = this.tools[index].service;
+    const serviceName = this.tools[this.currentToolIndex].service;
 
     if (!this.selectedSubTool) {
       this.selectedSubTool = 0;
     }
 
-    const toolName = this.tools[index].functions[this.selectedSubTool]
+    const toolName = this.tools[this.currentToolIndex].functions[this.selectedSubTool]
 
     const serviceFilename = serviceName.replace("Service", "").toLowerCase();
 
