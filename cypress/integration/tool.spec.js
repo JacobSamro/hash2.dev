@@ -2,7 +2,7 @@ describe('Main Test', () => {
   it('Should be true', () => {
 
 
-    const toolToTest = 5
+    const toolToTest = 7
 
     cy.visit('http://localhost:4200/')
     cy.get('.atool').each(($el, toolIndex, $list) => {
