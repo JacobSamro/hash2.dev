@@ -2,7 +2,7 @@ describe('Main Test', () => {
   it('Should be true', () => {
 
 
-    const toolToTest = 7
+    const toolToTest = -1 // Change the Tool Index here ( default -1 which will skip all tests ) ** DO NOT COMMIT THIS CHANGE **
 
     cy.visit('http://localhost:4200/')
     cy.get('.atool').each(($el, toolIndex, $list) => {
