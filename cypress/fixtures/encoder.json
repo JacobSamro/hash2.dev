@@ -1,5 +1,5 @@
 {
-    "url encoder": [
+    "toURLEncodedString": [
         {
             "input": "https://www.google.com",
             "output": "https%3A%2F%2Fwww.google.com"
@@ -13,7 +13,7 @@
             "output": "https%3A%2F%2Fwww.aroliant.com"
         }
     ],
-    "base64 encoder": [
+    "toBase64EncodedString": [
         {
             "input": "https://www.google.com",
             "output": "aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ=="
@@ -27,7 +27,7 @@
             "output": "aHR0cHM6Ly93d3cuYXJvbGlhbnQuY29t"
         }
     ],
-    "html special chars": [
+    "toHTMLSpecialCharsEncode": [
         {
             "input": "<head>",
             "output": "&lt;head&gt;"

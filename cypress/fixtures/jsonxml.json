@@ -24,7 +24,7 @@
         },
         {
             "output": "{\n\"name\": \"Admin\",\n\"age\": 36,\n\"rights\": [\n\"admin\",\n\"editor\",\n\"contributor\"\n]\n }",
-            "input": "<name>Admin</name>\n<age>36</age>\n<rights>admin</rights>\n<rights>editor</rights>\n<rights>contributor</rights>"
+            "input": "<root><name>Admin</name>\n<age>36</age>\n<rights>admin</rights>\n<rights>editor</rights>\n<rights>contributor</rights></root>"
         }
     ]
 }

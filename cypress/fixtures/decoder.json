@@ -1,5 +1,5 @@
 {
-    "url encoder": [
+    "toURLDecodedString": [
         {
             "input": "https%3A%2F%2Fwww.google.com",
             "output": "https://www.google.com"
@@ -14,7 +14,7 @@
         }
         
     ],
-    "base64 encoder": [
+    "toBase64DecodedString": [
         {
             "input": "aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==",
             "output": "https://www.google.com"
@@ -29,7 +29,7 @@
         }
        
     ],
-    "html special chars": [
+    "toHTMLSpecialCharsDecode": [
         {
             "input": "&lt;head&gt;",
             "output": "<head>"
