@@ -1,3 +1,33 @@
 {
-  
+    "prettifyHTML": [
+        {
+            "input": "<html>\n<body>\n<h1>My First Heading</h1>\n<p>My first paragraph.</p>\n</body>\n</html>",
+            "output": "<html>\n\n<body>\n    <h1>My First Heading</h1>\n    <p>My first paragraph.</p>\n</body>\n\n</html>"
+        }
+    ],
+    "prettifyCSS": [
+        {
+            "input": "body {\nbackground-color: lightblue;\n}\nh1 {\ncolor: white;\ntext-align: center;\n}\np {\nfont-family: verdana;font-size: 20px;\n}",
+            "output": "body {\n    background-color: lightblue;\n}\n\nh1 {\n    color: white;\n    text-align: center;\n}\n\np {\n    font-family: verdana;\n    font-size: 20px;\n}"
+        }
+    ],
+    "prettifyJSON": [
+        {
+            "input": "{\"name\":\"John\",\n\"age\":30,\n\"cars\": [\n {\n\"name\":\"Ford\",\n\"models\":[\"Fiesta\",\"Focus\",\"Mustang\"]\n},\n{\n\"name\":\"BMW\",\n \"models\":[\"320\", \"X3\", \"X5\"]\n},\n {\n\"name\":\"Fiat\",\n \"models\":[\"500\", \"Panda\"]\n}\n]\n}",
+            "output": "{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"cars\": [\n    {\n      \"name\": \"Ford\",\n      \"models\": [\n        \"Fiesta\",\n        \"Focus\",\n        \"Mustang\"\n      ]\n    },\n    {\n      \"name\": \"BMW\",\n      \"models\": [\n        \"320\",\n        \"X3\",\n        \"X5\"\n      ]\n    },\n    {\n      \"name\": \"Fiat\",\n      \"models\": [\n        \"500\",\n        \"Panda\"\n      ]\n    }\n  ]\n}"
+        }
+    ],
+    "prettifyXML": [
+        {
+            "input": "<root><name>Admin</name>\n<age>36</age>\n<rights>admin</rights>\n<rights>editor</rights>\n<rights>contributor</rights><root>",
+            "output": "<root>\n  <name>Admin</name>\n  <age>36</age>\n  <rights>admin</rights>\n  <rights>editor</rights>\n  <rights>contributor</rights>\n  <root>"
+            
+        }
+    ],
+    "prettifyJS": [
+        {
+            "input": "var person = {\n firstName: \"John\",\n  lastName : \"Doe\",\n  id     : 5566,\n  fullName : function() {\n    return this.firstName + \" \" + this.lastName;\n  }\n};\n\n// Display data from the object:\ndocument.getElementById(\"demo\").innerHTML = person.fullName();" ,
+            "output": "var person = {\n    firstName: \"John\",\n    lastName: \"Doe\",\n    id: 5566,\n    fullName: function() {\n        return this.firstName + \" \" + this.lastName;\n    }\n};\n\n// Display data from the object:\ndocument.getElementById(\"demo\").innerHTML = person.fullName();"
+        }
+    ]
 }

@@ -50,3 +50,4 @@ Thumbs.db
 .gitlab-ci.yml
 
 cypress/videos/
+cypress/screenshots/
