@@ -1,4 +1,4 @@
-# Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools) [![Maintainability](https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/maintainability)](https://codeclimate.com/github/Aroliant/DevTools/maintainability) <a href="https://codeclimate.com/github/Aroliant/DevTools/test_coverage"><img src="https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/test_coverage" /></a>
+# Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools) [![Maintainability](https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/maintainability)](https://codeclimate.com/github/Aroliant/DevTools/maintainability) <a href="https://codeclimate.com/github/Aroliant/DevTools/test_coverage"><img src="https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/test_coverage" /></a>[![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/#/projects/m7moj7/runs)
 
 Access Online  : [DevTools](https://tools.aroliant.com)
 
