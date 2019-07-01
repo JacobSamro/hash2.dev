@@ -1,11 +1,11 @@
 export class EncoderService{
 
   static toURLEncodedString(str){
-    return decodeURIComponent(str);
+    return encodeURIComponent(str);
   }
 
   static toBase64EncodedString(str) {
-    return atob(str);
+    return btoa(str);
   }
 
   static toHTMLSpecialCharsEncode(str) {
