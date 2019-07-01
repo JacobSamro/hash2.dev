@@ -2,7 +2,7 @@
     "toXML": [
         {
             "input": "{\"name\":\"John\",\n\"age\":30,\n\"cars\": [\n {\n\"name\":\"Ford\",\n\"models\":[\"Fiesta\",\"Focus\",\"Mustang\"]\n},\n                  {\n\"name\":\"BMW\",\n \"models\":[\"320\", \"X3\", \"X5\"]\n},\n {\n\"name\":\"Fiat\",\n \"models\":[\"500\", \"Panda\"]\n}\n]\n}",
-            "output": "<name>John</name>\n<age>30</age>\n<cars>\n  <name>Ford</name>\n  <models>Fiesta</models>\n  <models>Focus</models>\n  <models>Mustang</models>\n</cars>\n<cars>\n  <name>BMW</name>\n  <models>320</models>\n  <models>X3</models>\n  <models>X5</models>\n</cars>\n<cars>\n  <name>Fiat</name>\n  <models>500</models>\n  <models>Panda</models>\n</cars>"
+            "output": "<root>\n  <name>John</name>\n  <age>30</age>\n  <cars>\n    <name>Ford</name>\n    <models>Fiesta</models>\n    <models>Focus</models>\n    <models>Mustang</models>\n  </cars>\n  <cars>\n    <name>BMW</name>\n    <models>320</models>\n    <models>X3</models>\n    <models>X5</models>\n  </cars>\n  <cars>\n    <name>Fiat</name>\n    <models>500</models>\n    <models>Panda</models>\n  </cars>\n</root>"
         },
         {
             "input": "{\n\"cars\": {\n\"Nissan\": [\n{\n\"model\": \"Sentra\",\n\"doors\": 4\n},\n{\n\"model\": \"Maxima\",\n                       \"doors\": 4\n},\n{\n\"model\": \"Skyline\",\n\"doors\": 2\n}\n],\n\"Ford\": [\n{\n\"model\": \"Taurus\",\n                           \"doors\": 4\n},\n{\n\"model\": \"Escort\",\n\"doors\": 4\n}\n]\n}\n}",
@@ -10,21 +10,21 @@
         },
         {
             "input": "{\n\"name\": \"Admin\",\n\"age\": 36,\n\"rights\": [\n\"admin\",\n\"editor\",\n\"contributor\"\n]\n }",
-            "output": "<name>Admin</name>\n<age>36</age>\n<rights>admin</rights>\n<rights>editor</rights>\n<rights>contributor</rights>"
+            "output": "<root>\n  <name>Admin</name>\n  <age>36</age>\n  <rights>admin</rights>\n  <rights>editor</rights>\n  <rights>contributor</rights>\n</root>"
         }
     ],
     "toJSON": [
         {
-            "output": "{\"name\":\"John\",\n\"age\":30,\n\"cars\": [\n {\n\"name\":\"Ford\",\n\"models\":[\"Fiesta\",\"Focus\",\"Mustang\"]\n},\n                  {\n\"name\":\"BMW\",\n \"models\":[\"320\", \"X3\", \"X5\"]\n},\n {\n\"name\":\"Fiat\",\n \"models\":[\"500\", \"Panda\"]\n}\n]\n}",
-            "input": "<name>John</name>\n<age>30</age>\n<cars>\n  <name>Ford</name>\n  <models>Fiesta</models>\n  <models>Focus</models>\n  <models>Mustang</models>\n</cars>\n<cars>\n  <name>BMW</name>\n  <models>320</models>\n  <models>X3</models>\n  <models>X5</models>\n</cars>\n<cars>\n  <name>Fiat</name>\n  <models>500</models>\n  <models>Panda</models>\n</cars>"
+            "output": "{\n  \"root\": {\n    \"name\": \"John\",\n    \"age\": \"30\",\n    \"cars\": [\n      {\n        \"name\": \"Ford\",\n        \"models\": [\n          \"Fiesta\",\n          \"Focus\",\n          \"Mustang\"\n        ]\n      },\n      {\n        \"name\": \"BMW\",\n        \"models\": [\n          \"320\",\n          \"X3\",\n          \"X5\"\n        ]\n      },\n      {\n        \"name\": \"Fiat\",\n        \"models\": [\n          \"500\",\n          \"Panda\"\n        ]\n      }\n    ]\n  }\n}",
+            "input": "<root>\n  <name>John</name>\n  <age>30</age>\n  <cars>\n    <name>Ford</name>\n    <models>Fiesta</models>\n    <models>Focus</models>\n    <models>Mustang</models>\n  </cars>\n  <cars>\n    <name>BMW</name>\n    <models>320</models>\n    <models>X3</models>\n    <models>X5</models>\n  </cars>\n  <cars>\n    <name>Fiat</name>\n    <models>500</models>\n    <models>Panda</models>\n  </cars>\n</root>"
         },
         {
-            "output": "{\n\"cars\": {\n\"Nissan\": [\n{\n\"model\": \"Sentra\",\n\"doors\": 4\n},\n{\n\"model\": \"Maxima\",\n                       \"doors\": 4\n},\n{\n\"model\": \"Skyline\",\n\"doors\": 2\n}\n],\n\"Ford\": [\n{\n\"model\": \"Taurus\",\n                           \"doors\": 4\n},\n{\n\"model\": \"Escort\",\n\"doors\": 4\n}\n]\n}\n}",
+            "output": "{\n  \"cars\": {\n    \"Nissan\": [\n      {\n        \"model\": \"Sentra\",\n        \"doors\": \"4\"\n      },\n      {\n        \"model\": \"Maxima\",\n        \"doors\": \"4\"\n      },\n      {\n        \"model\": \"Skyline\",\n        \"doors\": \"2\"\n      }\n    ],\n    \"Ford\": [\n      {\n        \"model\": \"Taurus\",\n        \"doors\": \"4\"\n      },\n      {\n        \"model\": \"Escort\",\n        \"doors\": \"4\"\n      }\n    ]\n  }\n}",
             "input": "<cars>\n  <Nissan>\n    <model>Sentra</model>\n    <doors>4</doors>\n  </Nissan>\n  <Nissan>\n    <model>Maxima</model>\n    <doors>4</doors>\n  </Nissan>\n  <Nissan>\n    <model>Skyline</model>\n    <doors>2</doors>\n  </Nissan>\n  <Ford>\n    <model>Taurus</model>\n    <doors>4</doors>\n  </Ford>\n  <Ford>\n    <model>Escort</model>\n    <doors>4</doors>\n  </Ford>\n</cars>"
         },
         {
-            "output": "{\n\"name\": \"Admin\",\n\"age\": 36,\n\"rights\": [\n\"admin\",\n\"editor\",\n\"contributor\"\n]\n }",
-            "input": "<root><name>Admin</name>\n<age>36</age>\n<rights>admin</rights>\n<rights>editor</rights>\n<rights>contributor</rights></root>"
+            "output": "{\n  \"root\": {\n    \"name\": \"Admin\",\n    \"age\": \"36\",\n    \"rights\": [\n      \"admin\",\n      \"editor\",\n      \"contributor\"\n    ]\n  }\n}",
+            "input": "<root>\n  <name>Admin</name>\n  <age>36</age>\n  <rights>admin</rights>\n  <rights>editor</rights>\n  <rights>contributor</rights>\n</root>"
         }
     ]
 }

@@ -38,7 +38,7 @@
         },
         {
             "input": "<script>",
-            "output": "&lt;/script&gt;"
+            "output": "&lt;script&gt;"
         },
         {
             "input": "<div>",
