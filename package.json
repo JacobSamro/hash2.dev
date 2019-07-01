@@ -2,7 +2,7 @@
   "name": "dev-tools",
   "version": "0.0.1",
   "scripts": {
-    "cy:run": "cypress run --spec \"cypress/integration/main.spec.js\"",
+    "cy:run": "cypress run",
     "cy:run:server": "npx cypress run --record --key 472289cb-1185-4e7b-8284-df04cbe54662",
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +10,8 @@
     "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "concurrently \"npm run start\" \"wait-on http-get://localhost:4200 && npm run cy:run:server\" --kill-others",
+    "e2e": "concurrently --success first \"npm run start\" \"wait-on http-get://localhost:4200 && npm run cy:run:server\" --kill-others",
+    "e2e:local" : "concurrently --success first \"npm run start\" \"wait-on http-get://localhost:4200 && npm run cy:run\" --kill-others",
     "postinstall": "node patch.js"
   },
   "private": true,
