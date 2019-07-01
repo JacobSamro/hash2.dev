@@ -5,7 +5,7 @@ export class JSONXmlService {
 
   static toJSON(str) {
     return xmljs.xml2json(str, {
-      compact: true, spaces: 2, nativeType: false,  textFn: JSONXmlService.removeJsonTextAttribute
+      compact: true, spaces: 2, nativeType: false, textFn: JSONXmlService.removeJsonTextAttribute
     });
   }
 
@@ -24,14 +24,19 @@ export class JSONXmlService {
       } else {
         parentElement._parent[keyName] = value;
       }
-    } catch (e) {}
+    } catch (e) { }
   }
 
 
   static toXML(json) {
 
-    return xmljs.json2xml(json, { compact: true, spaces: 2 })
+    //Add <root> if the given JSON is not having a parent object
 
+    if(Object.keys(JSON.parse(json)).length > 1 ) { // Root is needed
+      json = '{ "root" : ' + json + " } "
+    }
+    
+    return xmljs.json2xml(json, { compact: true, spaces: 2 })
 
   }
 
