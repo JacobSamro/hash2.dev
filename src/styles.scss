@@ -29,10 +29,12 @@ $theme-colors: (
     }
   }
   
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     .ToolImg {
       width: 60px;
       height: 60px;
+      font-size: 50px;
+      text-align: center;
     }
   }
   
@@ -40,20 +42,26 @@ $theme-colors: (
     .ToolImg {
       width: 100px;
       height: 100px;
+      text-align: center;
+      font-size: 90px;
     }
   }
   
   @media only screen and (min-width: 1024px) {
     .ToolImg {
+      text-align: center;
       width: 200px;
       height: 200px;
+      font-size: 150px;
     }
   }
   
   @media only screen and (min-width: 1440px) {
     .ToolImg {
+      text-align: center;
       width: 200px;
       height: 200px;
+      font-size: 150px;
     }
   }
   .ToolDescription {
