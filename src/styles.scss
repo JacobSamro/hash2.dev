@@ -77,6 +77,32 @@ $theme-colors: (
   box-shadow: none !important;
 }
 
+button:focus {
+  outline: 0;
+}
+
+/* Pop */
+@keyframes pop {
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop {
+  display: inline-block;
+
+  &:hover {
+    animation-name: pop;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+}
+
 .OpenModal {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -136,7 +162,7 @@ $theme-colors: (
   left: 50%;
   transform: translate(-50%, -50%);
   top: 50%;
-  overflow: auto;
+  overflow: hidden;
   margin-top: 15px;
   margin-bottom: 15px;
 }
