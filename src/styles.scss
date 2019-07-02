@@ -113,7 +113,6 @@ $theme-colors: (
   .Modal {
     width: 90%;
     min-height: 200px;
-    max-width: 600px;
     margin: 3px;
     padding: 15px;
     border-radius: 0.25rem !important;
@@ -130,7 +129,7 @@ $theme-colors: (
   @media only screen and (min-width: 1024px) {
     .Modal {
       min-height: 350px;
-      max-width: 700px;
+      width: 50%;
     }
   }
 
