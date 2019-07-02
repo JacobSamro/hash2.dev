@@ -55,7 +55,7 @@ $theme-colors: (
 @media only screen and (min-width: 1024px) {
   .ToolImg {
     text-align: center;
-    width: 231px;
+    min-width: 160px;
     height: 231px;
     font-size: 150px;
   }
