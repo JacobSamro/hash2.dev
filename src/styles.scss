@@ -24,7 +24,7 @@ $theme-colors: (
 
 @media only screen and (min-width: 425px) {
   .ToolBody {
-    height: 200px;
+    height: 231px;
   }
 }
 
@@ -64,7 +64,7 @@ $theme-colors: (
   }
 }
 .ToolDescription {
-  height: 60px;
+  height: 100px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
