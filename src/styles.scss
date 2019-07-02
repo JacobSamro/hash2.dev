@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-$theme-colors: ();
+$theme-colors: (
+  "secondary": #5f5f5f
+);
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
@@ -70,8 +72,9 @@ $theme-colors: ();
 .form-control:focus {
   box-shadow: 0 0 0 0.1px rgba(0, 123, 255, 0.25); //overide bootstrap
 }
-.btn:focus, .btn:active {
-  box-shadow: none!important;
+.btn:focus,
+.btn:active {
+  box-shadow: none !important;
 }
 
 .OpenModal {
