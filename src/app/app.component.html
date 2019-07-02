@@ -1,22 +1,25 @@
 <div class="container-fluid">
-  <div class="bg-light row shadow-sm py-1 mb-4">
+  <div class="bg-white row shadow-sm py-1 mb-4">
     <div class="col-12 col-sm-12 col-md-5 col-lg-4 align-self-center p-0">
-      <div class="logoContainer" routerLink="/">
+      <div class="logoContainer d-none d-md-block" routerLink="/">
         <img class="small-gear gear" src="./assets/img/g-small.png">
         <img class="big-gear gear" src="./assets/img/g-big.png">
         <img class="logo" src="./assets/img/logo.png">
       </div>
     </div>
-    <div class="col-12 col-sm-12 col-md-7 col-lg-8 align-self-center">
+    <div class="col-12 col-sm-12 col-md-7 col-lg-4 align-self-center">
       <div class="form-group m-0">
-        <input class="form-control" placeholder="Search for tools" (input)="search($event.target.value)" />
+        <input class="form-control rounded-pill" placeholder="Search for tools" (input)="search($event.target.value)" />
       </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-7 col-lg-4 align-self-center">
+      <i class="fas fa-github    "></i>
     </div>
   </div>
 
   <div class="row pb-3">
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-2 atool" *ngFor="let tool of selectedtools; let i = index"
-      (click)="showModal(tool, i )" [attr.toolname]="tool.service" >
+      (click)="showModal(tool, i )" [attr.toolname]="tool.service">
       <div class="media shadow-sm Tool border rounded">
         <div class="media-body p-2 d-flex flex-column ToolBody">
           <div>
@@ -28,7 +31,7 @@
             <p class="small ToolDescription">{{tool.description}}</p>
           </div>
           <!-- <button class="btn btn-outline-primary btn-sm" (click)="showModal(t,t.id)" role="button">{{t.button}}</button> -->
-          <a class="btn btn-outline-primary btn-sm" (click)="showModal(tool,i)">{{tool.button}}</a>
+          <button class="btn btn-outline-primary btn-sm" (click)="showModal(tool,i)">{{tool.button}}</button>
         </div>
         <img alt="Thumbnail [200x200]" class="ToolImg m-1 m-lg-0 rounded" src="{{'./assets/'+tool.img}}">
       </div>
@@ -52,7 +55,8 @@
       <div class="d-flex flex-column justify-conten-around">
         <div class="mb-2">
           <h5 class="modal-title" *ngIf="selectedTool">{{selectedTool.name}}</h5>
-          <button type="button" class="close"  id="closeModal" data-dismiss="modal" aria-label="Close" (click)="closeModal()">
+          <button type="button" class="close" id="closeModal" data-dismiss="modal" aria-label="Close"
+            (click)="closeModal()">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -75,8 +79,8 @@
           </div>
 
           <div class="form-group mb-0">
-            <button type="button" class="btn btn-primary"
-              (click)="selectSubTool()" id="process">{{modalButton}}</button>
+            <button type="button" class="btn btn-primary" (click)="selectSubTool()"
+              id="process">{{modalButton}}</button>
           </div>
         </div>
       </div>
