@@ -28,6 +28,12 @@ $theme-colors: (
   }
 }
 
+.ToolImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 767px) {
   .ToolImg {
     width: 60px;
@@ -49,8 +55,8 @@ $theme-colors: (
 @media only screen and (min-width: 1024px) {
   .ToolImg {
     text-align: center;
-    width: 200px;
-    height: 200px;
+    width: 231px;
+    height: 231px;
     font-size: 150px;
   }
 }
@@ -58,8 +64,8 @@ $theme-colors: (
 @media only screen and (min-width: 1440px) {
   .ToolImg {
     text-align: center;
-    width: 200px;
-    height: 200px;
+    width: 231px;
+    height: 231px;
     font-size: 150px;
   }
 }
