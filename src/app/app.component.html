@@ -44,9 +44,9 @@
             <p class="mb-1 mb-md-0 ToolDescription">{{tool.description}}</p>
           </div>
           <!-- <button class="btn btn-outline-primary btn-sm" (click)="showModal(t,t.id)" role="button">{{t.button}}</button> -->
-          <button class="btn btn-outline-primary btn-sm" (click)="showModal(tool,i)">{{tool.button}}</button>
+          <button class="Button" (click)="showModal(tool,i)">{{tool.button}}</button>
         </div>
-        <i class="ToolImg m-1 m-lg-0 rounded text-secondary {{tool.icon}}"></i>
+        <i class="ToolImg m-1 m-lg-0 rounded text-secondary-light {{tool.icon}}"></i>
       </div>
     </div>
   </div>
@@ -92,8 +92,7 @@
           </div>
 
           <div class="form-group mb-0">
-            <button type="button" class="btn btn-primary" (click)="selectSubTool()"
-              id="process">{{modalButton}}</button>
+            <button type="button" class="Button" (click)="selectSubTool()" id="process">{{modalButton}}</button>
           </div>
         </div>
       </div>
