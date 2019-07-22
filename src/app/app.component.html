@@ -33,7 +33,7 @@
   <div class="row pb-3">
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 p-2 atool" *ngFor="let tool of selectedtools; let i = index"
       [attr.toolname]="tool.service">
-      <div class="media shadow-sm Tool border rounded overflow-hidden" (click)="showModal(tool, i )" >
+      <div class="media shadow-sm Tool border rounded overflow-hidden" (click)="showModal(tool, i )">
         <div class="media-body p-2 d-flex flex-column ToolBody">
           <div>
             <h5 class="mt-0 mb-1 text-primary">{{tool.name}}</h5>
@@ -54,11 +54,10 @@
   <footer class="row py-5 mt-2 bg-light text-light">
     <div class="col text-center">
       <div>
-        <span class="text-secondary">Copyright &copy; 2019 <a target="_blank" href="https://aroliant.com"
+        <span class="text-secondary">Made with &hearts; by <a target="_blank" href="https://aroliant.com"
             class="text-secondary">Aroliant</a></span>
       </div>
-      <div class="text-secondary">This project is <a
-          href="https://github.com/Aroliant/DevTools/blob/master/LICENSE">MIT</a> licensed.</div>
+      <div class="text-secondary">We are open source.</div>
     </div>
   </footer>
 </div>
