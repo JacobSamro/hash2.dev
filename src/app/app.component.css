@@ -126,6 +126,10 @@
     display: inline-block;
 }
 
+.logoContainer:focus{
+  outline: 0;
+}
+
 .big-gear {
     width: 30px;
     left: 151px;
