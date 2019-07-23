@@ -3,18 +3,38 @@
         {
             "input": "<html>\n<body>\n<h1>My First Heading</h1>\n<p>My first paragraph.</p>\n</body>\n</html>",
             "output": "<html>\n\n<body>\n    <h1>My First Heading</h1>\n    <p>My first paragraph.</p>\n</body>\n\n</html>"
+        },
+        {
+            "input": "<html><body><p>In HTML, spaces and new lines are ignored:</p><p>\nMy Bonnie lies over the ocean.\n My Bonnie lies over the sea.\n My Bonnie lies over the ocean.\nOh, bring back my Bonnie to me.</p></body>\n</html>",
+            "output": "<html>\n\n<body>\n    <p>In HTML, spaces and new lines are ignored:</p>\n    <p>\n        My Bonnie lies over the ocean.\n        My Bonnie lies over the sea.\n        My Bonnie lies over the ocean.\n        Oh, bring back my Bonnie to me.</p>\n</body>\n\n</html>"
+        },
+        {
+            "input": "<html><head><title>Bold Text Example</title></head>\n <body><p>The following word uses a <b>bold</b> typeface.</p>\n</body>\n</html>",
+            "output": "<html>\n\n<head>\n    <title>Bold Text Example</title>\n</head>\n\n<body>\n    <p>The following word uses a <b>bold</b> typeface.</p>\n</body>\n\n</html>"
         }
+        
+        
     ],
     "prettifyCSS": [
         {
             "input": "body {\nbackground-color: lightblue;\n}\nh1 {\ncolor: white;\ntext-align: center;\n}\np {\nfont-family: verdana;font-size: 20px;\n}",
             "output": "body {\n    background-color: lightblue;\n}\n\nh1 {\n    color: white;\n    text-align: center;\n}\n\np {\n    font-family: verdana;\n    font-size: 20px;\n}"
+        },
+        {
+            "input": "<style>\nh1{ color:white;\nbackground-color:red;padding:5px; }  p{  \ncolor:blue;  }  \n</style>",
+            "output": "<style>h1 {\n    color: white;\n    background-color: red;\n    padding: 5px;\n}\n\np {\n    color: blue;\n}\n\n</style>"
         }
+
     ],
     "prettifyJSON": [
         {
             "input": "{\"name\":\"John\",\n\"age\":30,\n\"cars\": [\n {\n\"name\":\"Ford\",\n\"models\":[\"Fiesta\",\"Focus\",\"Mustang\"]\n},\n{\n\"name\":\"BMW\",\n \"models\":[\"320\", \"X3\", \"X5\"]\n},\n {\n\"name\":\"Fiat\",\n \"models\":[\"500\", \"Panda\"]\n}\n]\n}",
             "output": "{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"cars\": [\n    {\n      \"name\": \"Ford\",\n      \"models\": [\n        \"Fiesta\",\n        \"Focus\",\n        \"Mustang\"\n      ]\n    },\n    {\n      \"name\": \"BMW\",\n      \"models\": [\n        \"320\",\n        \"X3\",\n        \"X5\"\n      ]\n    },\n    {\n      \"name\": \"Fiat\",\n      \"models\": [\n        \"500\",\n        \"Panda\"\n      ]\n    }\n  ]\n}"
+        },
+        {
+            "input": "{\"Students\": [ { \"Name\":\"Amit Goenka\" ,\n\"Major\":\"Physics\" }, { \"Name\":\"Smita Pallod\" ,\n\"Major\":\"Chemistry\" }\n]\n}",
+            "output": "{\n  \"Students\": [\n    {\n      \"Name\": \"Amit Goenka\",\n      \"Major\": \"Physics\"\n    },\n    {\n      \"Name\": \"Smita Pallod\",\n      \"Major\": \"Chemistry\"\n    }\n  ]\n}"
+            
         }
     ],
     "prettifyXML": [
@@ -22,12 +42,23 @@
             "input": "<root><name>Admin</name>\n<age>36</age>\n<rights>admin</rights>\n<rights>editor</rights>\n<rights>contributor</rights><root>",
             "output": "<root>\n  <name>Admin</name>\n  <age>36</age>\n  <rights>admin</rights>\n  <rights>editor</rights>\n  <rights>contributor</rights>\n  <root>"
             
+        },
+        {
+            "input": "<root>\n<name>John</name>\n<age>30</age>\n<cars>\n<name>Ford</name>\n<models>Fiesta</models>\n<models>Focus</models>\n<models>Mustang</models>\n</cars>\n<cars>\n<name>BMW</name>\n<models>320</models>\n<models>X3</models>\n<models>X5</models>\n</cars>\n<cars>\n    <name>Fiat</name>\n<models>500</models>\n<models>Panda</models>\n</cars>\n</root>",
+            "output": "<root>\n  <name>John</name>\n  <age>30</age>\n  <cars>\n    <name>Ford</name>\n    <models>Fiesta</models>\n    <models>Focus</models>\n    <models>Mustang</models>\n  </cars>\n  <cars>\n    <name>BMW</name>\n    <models>320</models>\n    <models>X3</models>\n    <models>X5</models>\n  </cars>\n  <cars>\n    <name>Fiat</name>\n    <models>500</models>\n    <models>Panda</models>\n  </cars>\n</root>"
+            
         }
+        
     ],
     "prettifyJS": [
         {
             "input": "var person = {\n firstName: \"John\",\n  lastName : \"Doe\",\n  id     : 5566,\n  fullName : function() {\n    return this.firstName + \" \" + this.lastName;\n  }\n};\n\n// Display data from the object:\ndocument.getElementById(\"demo\").innerHTML = person.fullName();" ,
             "output": "var person = {\n    firstName: \"John\",\n    lastName: \"Doe\",\n    id: 5566,\n    fullName: function() {\n        return this.firstName + \" \" + this.lastName;\n    }\n};\n\n// Display data from the object:\ndocument.getElementById(\"demo\").innerHTML = person.fullName();"
+        },
+        {
+            "input": "var price1 = 5;var price2 = 6;\nvar total = price1 + price2;\ndocument.getElementById(\"demo\").innerHTML =\n\"The total is: \" + total;",
+            "output": "var price1 = 5;\nvar price2 = 6;\nvar total = price1 + price2;\ndocument.getElementById(\"demo\").innerHTML =\n    \"The total is: \" + total;"
         }
+        
     ]
 }
