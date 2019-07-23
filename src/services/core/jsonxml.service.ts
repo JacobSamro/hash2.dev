@@ -4,56 +4,40 @@ import * as xmljs from 'xml-js';
 export class JSONXmlService {
 
   static toJSON(str) {
-    return xmljs.xml2json(str, { compact: true, spaces: 4 });
+    return xmljs.xml2json(str, {
+      compact: true, spaces: 2, nativeType: false, textFn: JSONXmlService.removeJsonTextAttribute
+    });
+  }
+
+  static removeJsonTextAttribute(value, parentElement) {
+    try {
+      const parentOfParent = parentElement._parent;
+      const pOpKeys = Object.keys(parentElement._parent);
+      const keyNo = pOpKeys.length;
+      const keyName = pOpKeys[keyNo - 1];
+      const arrOfKey = parentElement._parent[keyName];
+      const arrOfKeyLen = arrOfKey.length;
+      if (arrOfKeyLen > 0) {
+        const arr = arrOfKey;
+        const arrIndex = arrOfKey.length - 1;
+        arr[arrIndex] = value;
+      } else {
+        parentElement._parent[keyName] = value;
+      }
+    } catch (e) { }
   }
 
 
-  static toXML(o, tab) {
-// Source : https://goessner.net/download/prj/jsonxml/
-/*	This work is licensed under Creative Commons GNU LGPL License.
+  static toXML(json) {
 
-	License: http://creativecommons.org/licenses/LGPL/2.1/
-   Version: 0.9
-	Author:  Stefan Goessner/2006
-	Web:     http://goessner.net/ 
-*/
-    o = JSON.parse(o)
-    let toXml = function (v, name, ind) {
-      var xml = "";
-      if (v instanceof Array) {
-        for (var i = 0, n = v.length; i < n; i++)
-          xml += ind + toXml(v[i], name, ind + "\t") + "\n";
-      }
-      else if (typeof (v) == "object") {
-        var hasChild = false;
-        xml += ind + "<" + name;
-        for (var m in v) {
-          if (m.charAt(0) == "@")
-            xml += " " + m.substr(1) + "=\"" + v[m].toString() + "\"";
-          else
-            hasChild = true;
-        }
-        xml += hasChild ? ">" : "/>";
-        if (hasChild) {
-          for (var m in v) {
-            if (m == "#text")
-              xml += v[m];
-            else if (m == "#cdata")
-              xml += "<![CDATA[" + v[m] + "]]>";
-            else if (m.charAt(0) != "@")
-              xml += toXml(v[m], m, ind + "\t");
-          }
-          xml += (xml.charAt(xml.length - 1) == "\n" ? ind : "") + "</" + name + ">";
-        }
-      }
-      else {
-        xml += ind + "<" + name + ">" + v.toString() + "</" + name + ">";
-      }
-      return xml;
-    }, xml = "";
-    for (var m in o)
-      xml += toXml(o[m], m, "");
-    return tab ? xml.replace(/\t/g, tab) : xml.replace(/\t|\n/g, "");
+    //Add <root> if the given JSON is not having a parent object
+
+    if(Object.keys(JSON.parse(json)).length > 1 ) { // Root is needed
+      json = '{ "root" : ' + json + " } "
+    }
+    
+    return xmljs.json2xml(json, { compact: true, spaces: 2 })
+
   }
 
 }

@@ -1,3 +1,49 @@
 {
-  
+    "toURLEncodedString": [
+        {
+            "input": "https://www.google.com",
+            "output": "https%3A%2F%2Fwww.google.com"
+        },
+        {
+            "input": "https://www.facebook.com",
+            "output": "https%3A%2F%2Fwww.facebook.com"
+        },
+        {
+            "input": "https://www.aroliant.com",
+            "output": "https%3A%2F%2Fwww.aroliant.com"
+        }
+    ],
+    "toBase64EncodedString": [
+        {
+            "input": "https://www.google.com",
+            "output": "aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ=="
+        },
+        {
+            "input": "https://www.facebook.com",
+            "output": "aHR0cHM6Ly93d3cuZmFjZWJvb2suY29t"
+        },
+        {
+            "input": "https://www.aroliant.com",
+            "output": "aHR0cHM6Ly93d3cuYXJvbGlhbnQuY29t"
+        }
+    ],
+    "toHTMLSpecialCharsEncode": [
+        {
+            "input": "<head>",
+            "output": "&lt;head&gt;"
+        },
+        {
+            "input": "<body>",
+            "output": "&lt;body&gt;"
+        },
+        {
+            "input": "<script>",
+            "output": "&lt;script&gt;"
+        },
+        {
+            "input": "<div>",
+            "output": "&lt;div&gt;"
+        }
+        
+    ]
 }
