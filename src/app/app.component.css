@@ -84,41 +84,6 @@
     }
 }
 
-/* Rotate */
-
-@-webkit-keyframes rotater {
-    0% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@-moz-keyframes rotater {
-    0% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes rotater {
-    0% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
 .logoContainer {
     margin: 0px;
     height: 65px;
@@ -130,28 +95,11 @@
   outline: 0;
 }
 
-.big-gear {
-    width: 30px;
-    left: 151px;
-    top: 26px;
-    animation: rotater 1.75s infinite reverse;
-}
-
-.small-gear {
-    left: 129px;
-    top: 32px;
-    width: 23px;
-    animation: rotater 2s infinite;
-}
-
 .logo {
     background-size: contain;
     height: 65px;
 }
 
-.gear {
-    position: absolute;
-}
 
 /* JSON Object prettifier */
 
