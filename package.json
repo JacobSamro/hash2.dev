@@ -1,5 +1,5 @@
 {
-  "name": "dev-tools",
+  "name": "hash2",
   "version": "0.0.1",
   "scripts": {
     "cy:run": "cypress run",
