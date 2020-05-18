@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dev-tools": {
+    "hash2": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dev-tools:build"
+            "browserTarget": "hash2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dev-tools:build:production"
+              "browserTarget": "hash2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dev-tools:build"
+            "browserTarget": "hash2:build"
           }
         },
         "test": {
@@ -92,7 +92,7 @@
         }
       }
     },
-    "dev-tools-e2e": {
+    "hash2-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -101,11 +101,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "dev-tools:serve"
+            "devServerTarget": "hash2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dev-tools:serve:production"
+              "devServerTarget": "hash2:serve:production"
             }
           }
         },
@@ -119,5 +119,5 @@
       }
     }
   },
-  "defaultProject": "dev-tools"
+  "defaultProject": "hash2"
 }

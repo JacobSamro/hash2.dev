@@ -1,6 +1,6 @@
-# Dev Tools [![CircleCI](https://circleci.com/gh/Aroliant/DevTools.svg?style=svg)](https://circleci.com/gh/Aroliant/DevTools) [![Maintainability](https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/maintainability)](https://codeclimate.com/github/Aroliant/DevTools/maintainability) <a href="https://codeclimate.com/github/Aroliant/DevTools/test_coverage"><img src="https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/test_coverage" /></a> [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAroliant%2FDevTools.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAroliant%2FDevTools?ref=badge_shield) [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/#/projects/m7moj7/runs)
+# Dev Tools [![Maintainability](https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/maintainability)](https://codeclimate.com/github/Aroliant/DevTools/maintainability) <a href="https://codeclimate.com/github/Aroliant/DevTools/test_coverage"><img src="https://api.codeclimate.com/v1/badges/471981e7cfb7c53496d0/test_coverage" /></a> [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FAroliant%2FDevTools.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FAroliant%2FDevTools?ref=badge_shield) [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/#/projects/m7moj7/runs)
 
-Access Online  : [DevTools](https://tools.aroliant.com)
+Access Online  : [DevTools](https://hash2.dev)
 
 React Native Version : [Github](https://github.com/Aroliant/DevTools.ReactNative)
 
@@ -30,6 +30,10 @@ React Native Version : [Github](https://github.com/Aroliant/DevTools.ReactNative
 | JSON to XML      | 0%            | ✘        |
 | XML to JSON      | 0%            | ✘        |
 | Prettier         | 0%            | ✘        |
+
+## 🔥 Contributions
+
+* Logo - [Ramprakash Narayanasamy](http://toonspeaks.com)
 
 ## 🤝 Contributing
 
