@@ -3,7 +3,7 @@
 # compiled output
 /dist
 /tmp
-/out-tsc
+/.nuxt
 
 # dependencies
 /node_modules
@@ -46,10 +46,6 @@ Thumbs.db
 # Photoshop
 *.psd
 
-# CI/CD
-.gitlab-ci.yml
 
 cypress/videos/
 cypress/screenshots/
-
-.nuxt/
